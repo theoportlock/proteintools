@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tgfdata.xsd" generated="2020-01-12T15:43:39">
+<Tgfdata>
+<ID>5</ID>
+<Purification_x0020_log_x0020_ID>3</Purification_x0020_log_x0020_ID>
+<Column_x0020_ID>1</Column_x0020_ID>
+<Volume_x0020__x0028_ml_x0029_>0</Volume_x0020__x0028_ml_x0029_>
+<OD_x0020__x0028_mAU_x0029_>0</OD_x0020__x0028_mAU_x0029_>
+</Tgfdata>
+<Tgfdata>
+<ID>6</ID>
+<Purification_x0020_log_x0020_ID>3</Purification_x0020_log_x0020_ID>
+<Column_x0020_ID>1</Column_x0020_ID>
+<Volume_x0020__x0028_ml_x0029_>120</Volume_x0020__x0028_ml_x0029_>
+<OD_x0020__x0028_mAU_x0029_>3</OD_x0020__x0028_mAU_x0029_>
+</Tgfdata>
+</dataroot>

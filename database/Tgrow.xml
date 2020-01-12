@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tgrow.xsd" generated="2020-01-12T15:43:48">
+<Tgrow>
+<ID>1</ID>
+<Purification_x0020_Log_x0020_ID>3</Purification_x0020_Log_x0020_ID>
+<Time_x0020__x0028_min_x0029_>0</Time_x0020__x0028_min_x0029_>
+<OD>0</OD>
+</Tgrow>
+<Tgrow>
+<ID>2</ID>
+<Purification_x0020_Log_x0020_ID>3</Purification_x0020_Log_x0020_ID>
+<Time_x0020__x0028_min_x0029_>1</Time_x0020__x0028_min_x0029_>
+<OD>0</OD>
+</Tgrow>
+<Tgrow>
+<ID>3</ID>
+<Purification_x0020_Log_x0020_ID>3</Purification_x0020_Log_x0020_ID>
+<Time_x0020__x0028_min_x0029_>2</Time_x0020__x0028_min_x0029_>
+<OD>0</OD>
+</Tgrow>
+<Tgrow>
+<ID>4</ID>
+<Purification_x0020_Log_x0020_ID>3</Purification_x0020_Log_x0020_ID>
+<Time_x0020__x0028_min_x0029_>3</Time_x0020__x0028_min_x0029_>
+<OD>1</OD>
+</Tgrow>
+<Tgrow>
+<ID>5</ID>
+<Purification_x0020_Log_x0020_ID>3</Purification_x0020_Log_x0020_ID>
+<Time_x0020__x0028_min_x0029_>4</Time_x0020__x0028_min_x0029_>
+<OD>1</OD>
+</Tgrow>
+</dataroot>

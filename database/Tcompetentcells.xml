@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tcompetentcells.xsd" generated="2020-01-12T15:43:15">
+<Tcompetentcells>
+<ID>1</ID>
+<Nam>Lee BL21</Nam>
+<Source>prev from neb</Source>
+<Date_x0020_of_x0020_creation>2019-08-08T00:00:00</Date_x0020_of_x0020_creation>
+</Tcompetentcells>
+<Tcompetentcells>
+<ID>2</ID>
+<Nam>Ben BL21</Nam>
+<Source>prev from neb</Source>
+<Date_x0020_of_x0020_creation>2019-08-15T00:00:00</Date_x0020_of_x0020_creation>
+</Tcompetentcells>
+</dataroot>

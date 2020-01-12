@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tmediatype.xsd" generated="2020-01-12T15:44:20">
+<Tmediatype>
+<ID>1</ID>
+<Nam>LB</Nam>
+</Tmediatype>
+<Tmediatype>
+<ID>2</ID>
+<Nam>2X YT</Nam>
+</Tmediatype>
+<Tmediatype>
+<ID>3</ID>
+<Nam>M9</Nam>
+</Tmediatype>
+</dataroot>

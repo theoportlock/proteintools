@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataroot xmlns:od="urn:schemas-microsoft-com:officedata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="Tgrowtype.xsd" generated="2020-01-12T15:43:57">
+<Tgrowtype>
+<ID>1</ID>
+<Nam>IPTG induction</Nam>
+<Description>Grow to OD 0.6 then induce with 0.5 mM IPTG final conc</Description>
+</Tgrowtype>
+<Tgrowtype>
+<ID>2</ID>
+<Nam>Autoinduction</Nam>
+<Description>Leave O/N at 30 degC</Description>
+</Tgrowtype>
+</dataroot>
