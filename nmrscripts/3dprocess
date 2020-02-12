@@ -1,0 +1,103 @@
+#!/bin/csh
+
+# Turns these options on/off depending on what you want to do.
+# You can set 'n' to parts you are happy with to save time.
+set CONVERSION = y
+set PROCESS_X = y
+set PROCESS_Z = y
+set PROCESS_Y = n
+set PROJECTIONS = n
+set EXPORT = n
+
+#Set the experiment name. This will define the name for all subsequent files.
+
+set EXPT = cbcaconh
+
+####-----------------------------------------------------------------------------####
+# This is the script copied and pasted from the bruker command.
+# -ymode and -zmode can be taken from acqua files or topspin
+
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser \
+  -bad 0.0 -ext -aswap -AMX -decim 2040 -dspfvs 20 -grpdly 67.9862060546875  \
+  -xN              2048  -yN                80  -zN               112  \
+  -xT              1024  -yT                40  -zT                56  \
+  -xMODE            DQD  -yMODE        Complex  -zMODE        Complex  \
+  -xSW         9803.922  -ySW         1986.492  -zSW        10204.082  \
+  -xOBS         700.133  -yOBS          70.952  -zOBS         176.055  \
+  -xCAR           4.819  -yCAR         117.125  -zCAR          44.782  \
+  -xLAB              HN  -yLAB             15N  -zLAB             13C  \
+  -ndim               3  -aq2D         Complex                         \
+  -out ./fid/$EXPT%03d.fid -verb -ov
+endif
+
+####-----------------------------------------------------------------------------####
+# This direct dimension is your classic 1D processing
+# Comment out EM function if you don't want to use line broadening.
+# It should give a better S/N ratio but can reduce resolution. 
+
+if ($PROCESS_X == 'y') then
+
+xyz2pipe -in fid/$EXPT%03d.fid -x -verb                  \
+| nmrPipe  -fn POLY -time                                \
+| nmrPipe  -fn SOL                                       \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5       \
+| nmrPipe  -fn EM -lb 20.0                               \
+| nmrPipe  -fn ZF -auto                                  \
+| nmrPipe  -fn FT                                        \
+| nmrPipe  -fn EXT -x1 11ppm -xn 6ppm -sw -round 2       \
+| nmrPipe  -fn PS -p0 0.0 -p1 0 -di                      \
+| pipe2xyz -ov -out ./ft1/$EXPT%03d.ft1 -x                 
+endif
+
+####-----------------------------------------------------------------------------####
+#Processes indirect dimensions. z first than y.
+
+if ($PROCESS_Z == 'y') then
+
+xyz2pipe -in ft1/$EXPT%03d.ft1 -z -verb                  \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 1              \
+| nmrPipe  -fn ZF -zf 2 -auto                            \
+| nmrPipe  -fn FT -auto                                  \
+| nmrPipe  -fn PS -p0 0 -p1 0 -di                        \
+| pipe2xyz -out ./ft2/$EXPT%03d.ft2 -z
+endif
+
+####-----------------------------------------------------------------------------####
+if ($PROCESS_Y == 'y') then
+
+xyz2pipe -in ft2/$EXPT%03d.ft2 -y -verb                  \
+| nmrPipe  -fn LP                                        \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 1              \
+| nmrPipe  -fn ZF -zf 2 -auto                            \
+| nmrPipe  -fn FT -alt -neg                              \
+| nmrPipe  -fn PS -p0 0 -p1 0 -di                        \
+| nmrPipe  -fn POLY -auto -ord 2                         \
+| nmrPipe  -fn TP                                        \
+| pipe2xyz -out ft3/$EXPT%03d.ft3 -y
+
+endif
+
+####-----------------------------------------------------------------------------####
+# These projections basically concatenate the individual 3D planes onto one spectrum.
+
+if ($PROJECTIONS == 'y') then
+
+proj3D.tcl -in ./ft3/$EXPT%03d.ft3
+endif
+
+####-----------------------------------------------------------------------------####
+#Comment 'rm' commands to keep fid/ft files
+#Output as a single file for viewing in CCPN Analysis
+
+if ($EXPORT == 'y') then
+
+xyz2pipe -in ./ft3/$EXPT%03d.ft3 -x -verb               \
+pipe2ucsf $EXPT.ft3 $EXPT.ucsf
+
+#xyz2pipe -in ./ft3/$EXPT%03d.ft3 -x -verb               \
+#| nmrPipe -ov -out $EXPT.ft3
+
+rm -r ./ft*
+rm -r ./fid                
+endif

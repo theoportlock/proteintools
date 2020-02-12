@@ -1,0 +1,141 @@
+#!/bin/csh
+# nmrPipe script for processing bruker style pseudo-3D relaxation data
+# with the relaxation delay as the innermost loop.
+# Base on information in:
+#   http://spin.niddk.nih.gov/NMRPipe/doc2new/#How%20to%20fit%20a%202D%20spectrum,\
+# %20evaluate%20the%20fit,%20and%20revise%20a%20peak%20table%20accordingly
+#
+#Help
+#====
+#Conversion:	- yN is TD2 x NBL
+#		- yT is yN/2
+#		- yMODE has to be "Complex", as EA is dealt with at processing
+#		- ndim is 2
+#Processing:	- Except for the "MAC" line, process as usual
+#nmrDraw:	- 'H' to view fid in "relax.fid", 'P' to FT it on screen.
+#		- The first NBL fid are the first increments of the HSQC for
+#			each value of Tau.
+#		- On the 2D spectrum, press 'shift+Z' to see the intensities through
+#			the Z axis
+#Fitting:	- Set "peakThresh" to the right level using nmrDraw min contour value.
+#		- Each detected peak will have its values fitted and shown in a PDF
+#			(this might take some times if there are a lot of peaks, or 
+#			if there are a lot of peaks in clusters). The PDF is "all.pdf".
+#		- On the 2D spectrum, to show the peak list, press "K" to bring 
+#			the 'peak' menu. Write the name of the peak list 
+#			as "hn.tab" and click "Read".
+#		- The simulation (gaussian-fitted peak shape) of the 2D spectrum 
+#			is in the directory "sim". 
+#		- The difference between teh simulation and the data 
+#			is in the directory "dif". 
+#		- The result of the exponential fit for each peak is in the
+#			directory "txt"
+#		- The result of the exponential fit for each peak is in the
+#			directory "gnu"
+#		- If the fitting hung, it could be because of a cluster with too many members
+#			inside it. These are accessible if you load the pick list and selcet the
+#			right parameter in the "variables" dropbox (ClusterID, MemCnt).
+#
+#			If this happens, there's little other choice than trying to reprocess
+#			sharper (-AMX might also help) or to fit with adjusted (semi-manually)
+#			partial peak lists, by editing hn.tab and selecting different thresholds.
+#			> Command to select peaks of one cluster:
+#			grep -e " clusterID" hn.tab -e DATa -e VARS -e FORM -e REMA > newpeaklist.tab
+#			> Command to select all peaks but of one cluster:
+#			grep -v " clusterID" hn.tab > newpeaklist.tab
+
+
+
+set CONVERSION = y
+set PROCESSING = y
+set FITTING = n
+
+set taulist  = (8 16 24 32 48 64 96 144)
+set peakThresh = 140000
+
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser  \
+  -bad 0.0 -ext -aswap -AMX -decim 1792 -dspfvs 20 -grpdly 67.9841766357422  \
+  -xN              2048  -yN               192   \
+  -xT              1024  -yT                96   \
+  -xMODE            DQD  -yMODE        Complex   \
+  -xSW        11160.714  -ySW         1986.492   \
+  -xOBS         700.203  -yOBS          70.959   \
+  -xCAR           4.657  -yCAR         119.965   \
+  -xLAB              HN  -yLAB             15N   \
+  -ndim               2  -aq2D          States   \
+  -out ./relax.fid -verb -ov
+endif
+
+
+
+if (!(-d ft)) then
+mkdir ft
+endif
+
+set no_spectra = (`cat acqus | grep NBL | cut -d" " -f2`)
+set cList = ""
+set outName = ""
+set qmix_factor = (`MATH $no_spectra\*2\+1`)
+set no_coef  = (`MATH $no_spectra\*2`)
+set i=0
+
+while ($i < $no_spectra)
+set cList = ($cList 0 0 0 0)
+@ i++
+end
+
+if ($PROCESSING == 'y') then
+
+set i = 0
+
+while ($i < $no_spectra)
+@ i++
+
+set geoff = (`MATH $i\*2\-1`)
+set cList[$geoff] = 1
+
+set geoff1 = (`MATH $geoff+$qmix_factor`)
+echo $geoff1
+set cList[$geoff1] = 1
+set outName = `printf ft/relax%03d.ft2 $i`
+set tau = $taulist[$i]
+echo $cList
+
+nmrPipe -in ./relax.fid							\
+	| nmrPipe -fn QMIX -ic $no_coef -oc 2 -cList $cList -time	\
+	| nmrPipe -fn MAC -macro $NMRTXT/ranceY.M -noRd -noWr	\
+	| nmrPipe  -fn SOL       				\
+	| nmrPipe  -fn GMB -lb -8.0 -gb 0.06 -c 0.5		\
+	| nmrPipe  -fn ZF -auto					\
+	| nmrPipe  -fn FT -auto					\
+	| nmrPipe  -fn PS -p0 -14.0  -p1 0 -di			\
+        | nmrPipe  -fn POLY -auto	                	\
+ 	| nmrPipe  -fn EXT -left -sw	                	\
+	| nmrPipe  -fn TP					\
+	| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5	\
+	| nmrPipe  -fn ZF -auto 				\
+	| nmrPipe  -fn FT -neg					\
+	| nmrPipe  -fn PS -p0 0 -p1 0 -di 			\
+	-out $outName -ov -verb
+
+sethdr $outName -tau $tau
+
+set cList[$geoff] = 0
+set cList[$geoff1] = 0
+
+end
+
+series.com ft/*
+
+endif
+
+if ($FITTING == 'y') then
+peakHN.tcl -proj -in ./ft/relax001.ft2 -out hn.tab -hi $peakThresh
+autoFit.tcl -specName ./ft/relax%03d.ft2 -series -inTab hn.tab
+modelExp.tcl nlin.tab nlin.spec.list 0.0
+cat plot/*.ps > all.ps
+ps2pdf all.ps
+acroread all.pdf
+endif
+

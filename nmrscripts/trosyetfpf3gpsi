@@ -1,0 +1,44 @@
+#!/bin/csh
+#
+# nmrpipe script for processing 2D TROSY: trosyetfpf3gpsi (800 MHz, Imperial College)
+#	written by Andrea C. Sauerwein 26.01.2016
+#
+set CONVERSION = y
+set PROCESSING = y
+#
+# 1. data conversion
+#
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1792 -dspfvs 20 -grpdly 67.9841766357422  \
+  -xN              2048  -yN               180  \
+  -xT              1024  -yT                90  \
+  -xMODE            DQD  -yMODE  Echo-AntiEcho  \
+  -xSW        11160.714  -ySW         2594.707  \
+  -xOBS         800.324  -yOBS          81.105  \
+  -xCAR           4.916  -yCAR         118.586  \
+  -xLAB              HN  -yLAB             15N  \
+  -ndim               2  -aq2D          States  \
+  -out ./TROSY.fid -verb -ov
+endif
+
+# 
+# 2. processing
+#
+if ($PROCESSING == 'y') then
+   nmrPipe -verb -in ./TROSY.fid                 \
+   |   nmrPipe -fn SOL			\
+   |   nmrPipe -fn GMB -lb -2 -gb 0.1 -c 0.5\
+   |   nmrPipe -fn ZF -zf 4                     \
+   |   nmrPipe -fn FT -auto                     \
+   |   nmrPipe -fn PS -p0 -7.8 -p1 0.0 -di       \
+   |   nmrPipe -fn EXT -x1 12ppm -xn 3.5ppm -sw       \
+   |   nmrPipe -fn TP \
+   |   nmrPipe -fn LP -f -ord 16                    \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \
+   |   nmrPipe -fn ZF -auto                     \
+   |   nmrPipe -fn FT -auto                     \
+   |   nmrPipe -fn PS -p0 -90 -p1 0.0 -di         \
+   |   nmrPipe -fn TP                           \
+   |   nmrPipe -ov -verb -out TROSY.ft2 
+endif
