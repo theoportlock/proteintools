@@ -1,2 +1,0 @@
-#!/bin/bash
-pymol -cq ~/system/scripts/$1 -- $2
