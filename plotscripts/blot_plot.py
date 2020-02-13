@@ -1,15 +1,4 @@
 #!/usr/bin/env python
-"""
-Created on Mon Dec  9 16:30:41 2019
-
-@author: bendorgan
-
-###########################################
-edited by peo naughtcock
-
-run with python blot_plot.py <filename>.csv
-###########################################
-"""
 
 import sys
 import pandas as pd
