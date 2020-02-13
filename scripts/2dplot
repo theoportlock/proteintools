@@ -12,8 +12,9 @@ fig, ax = plt.subplots(1,1)
 x = list(df)[0]
 y = list(df)[1]
 
-ax.scatter(df[x], df[y], s=5, c="Red")
+ax.scatter(df[x], df[y], s=5)
 ax.set(ylabel=y) 
 plt.xticks(rotation=90)
 plt.xlabel(x)
-plt.savefig(os.path.splitext(sys.argv[1])[0]+".svg", format="svg")
+plt.tight_layout()
+plt.savefig(os.path.splitext(sys.argv[1])[0]+".svg")
