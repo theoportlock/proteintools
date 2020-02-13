@@ -1,0 +1,15 @@
+#distancefinder
+hide
+show cartoon
+select query, n. hd1 in i. 196
+select nearby, h. within 4 of query
+show spheres, nearby
+show spheres, query
+set sphere_transparency, 0.5
+set sphere_scale, 0.5
+set sphere_color, blue, nearby
+set sphere_color, red, query
+iterate (nearby), print(resi + " " + name)
+#label nearby, resi, name
+#distancesRH lspdn0_18, 28, 4.7, show=Y, aname=hd1
+#show lines, Residues

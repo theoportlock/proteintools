@@ -1,0 +1,659 @@
+Some examples of relatively simple scripts for processing NMR data using nmrPipe:
+These scripts are to get you started.  To optimize the processing for your sample, you 
+should experiment with different window functions (such as SP, EM, etc.), as well as 
+phase correction, baseline correction, and linear prediction.
+
+The scripts begin reading a Varian format fid file (filename.var) and finish by 
+creating a Sparky-format processed spectrum. 
+=========================================================== 
+Summary of examples:
+
+1) 2-D NOE (States) 
+2) 2-D TOCSY (States) 
+3) 2-D N15-H1 HSQC (Sensitivity-enhanced States) 
+4) 2-D N15-H1 HMQC-JR (TPPI) 
+5) 2-D N15-H1 HSMQC (TPPI) 
+6) 2-D C13-H1 HSQC (TPPI) 
+7) 3-D N15-H1-H1 HSQC-NOE (States, Sensitivity-enhanced States) 
+8) 3-D N15-H1-H1 HSQC-TOCSY (States, Sensitivity-enhanced States) 
+9) 3-D C13-H1-H1 HCCH-TOCSY (TPPI) 
+10) 3-D HNCA (States, Sensitivity-enhanced States) 
+11) 3-D HACACBCO (TPPI)
+
+===========================================================
+
+1) Homonuclear 2-D NOE :
+
+Example of processing data for a 2-D NOE spectrum 
+acquired using "States" method for the 2nd dimension.
+
+#!/bin/csh 
+var2pipe -in ./y2at_wnoe2.var   \ 
+  -xN             2048   \ 
+  -yN              800   \ 
+  -xT             1024   \ 
+  -yT              400   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -xSW         7800.000  \ 
+  -ySW         7800.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -xCAR           4.920  \ 
+  -yCAR           4.920  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+# | nmrPipe -fn SOL      \ 
+| nmrPipe -fn SP -off 0.02 -end 0.999 -pow 1 -c 1.0         \ 
+| nmrPipe -fn EM -lb 22.0       \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 -45.0 -p1 -117.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.50 -end 0.999 -pow 1 -c 0.6         \ 
+| nmrPipe -fn EM -lb 1.0   \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 -20.0  -p1 40.0  -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn POLY -auto    \ 
+| nmrPipe -fn TP   \ 
+| nmrPipe -fn POLY -auto  \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2at_wnoe2.spa 
+rm -f temp 
+rm -f temp2 
+cp y2at_wnoe2.spa ~/Sparky/Save/
+
+=========================================================== 
+2) Homonuclear 2-D TOCSY :
+
+Example of processing data for a 2-D TOCSY spectrum 
+acquired using "States" method for the 2nd dimension:
+
+#!/bin/csh 
+var2pipe -in ./y2at_wtoc2.var   \ 
+  -xN             2048   \ 
+  -yN              600   \ 
+  -xT             1024   \ 
+  -yT              300   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -xSW         7800.000  \ 
+  -ySW         7800.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -xCAR           4.920  \ 
+  -yCAR           4.920  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+# | nmrPipe -fn SOL      \ 
+| nmrPipe -fn SP -off 0.02 -end 0.99 -pow 1 -c 0.9         \ 
+| nmrPipe -fn EM -lb 22.0     \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 100.0 -p1 -60.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.5 -end 0.99 -pow 1 -c 0.5         \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 0.0  -p1 0.0  -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn POLY -auto    \ 
+| nmrPipe -fn TP            \ 
+| nmrPipe -fn POLY -auto    \ 
+| nmrPipe -fn TP            \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2at_wtoc2.spa 
+rm -f temp 
+rm -f temp2 
+cp y2at_wtoc2.spa ~/Sparky/Save/
+
+===========================================================
+
+3) Heteronuclear 2-D HSQC :
+
+For data acquired using Sensitivity-enhanced "States-Tppi" method 
+for the 2nd dimension, such as with 15N-1H HSQC:
+
+#!/bin/csh 
+var2pipe -in ./y2at_hsqc1.var   \ 
+  -xN             2048   \ 
+  -yN              512   \ 
+  -xT             1024   \ 
+  -yT              256   \ 
+  -xMODE        Complex  \ 
+  -yMODE      Rance-Kay  \ 
+  -xSW         8500.000  \ 
+  -ySW         5000.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS          50.700  \ 
+  -xCAR           4.800  \ 
+  -yCAR         121.000  \ 
+  -xLAB              H1  \ 
+  -yLAB             N15  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+ nmrPipe -in ./temp   \ 
+| nmrPipe -fn SOL      \ 
+| nmrPipe -fn SP -off 0.02 -end 0.999 -pow 1 -c 1.0   \ 
+| nmrPipe -fn EM -lb 22      \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 270.0 -p1 -55.0 -di    \ 
+| nmrPipe -fn TP     \ 
+| nmrPipe -fn ZF -auto    \ 
+| nmrPipe -fn SP -off 0.14 -end 0.999 -pow 1 -c 0.5   \ 
+| nmrPipe -fn EM -lb 3    \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 0.0  -p1 0.0  -di   \ 
+| nmrPipe -fn REV     \ 
+| nmrPipe -fn POLY -auto  \ 
+  -out ./temp2 -verb -ov 
+# 
+pipe2ucsf temp2 y2at_hsqc1.spa 
+rm -f temp 
+rm -f temp2 
+#
+
+==========================================================
+
+4) Heteronuclear 2-D HMQC-JR (HMQC with jump-return water suppression):
+
+For data acquired using TPPI for second dimension:
+
+#!/bin/csh 
+var2pipe -in ./y2a_hmqcjr_2.var   \ 
+  -xN             2048   \ 
+  -yN              700   \ 
+  -xT             1024   \ 
+  -yT              700   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Real     \ 
+  -xSW         8500.000  \ 
+  -ySW         5000.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS          50.700  \ 
+  -xCAR           4.870  \ 
+  -yCAR          121.00  \ 
+  -xLAB              H1  \ 
+  -yLAB             N15  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+| nmrPipe -fn NULL    \ 
+| nmrPipe -fn SP -off 0.020 -end 0.99 -pow 1 -c 0.9         \ 
+| nmrPipe -fn EM -lb 20.0   \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 180.0 -p1 0.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.8ppm -xn 5.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.35 -end 0.98 -pow 2 -c 0.6         \ 
+| nmrPipe -fn EM -lb 6.0   \ 
+| nmrPipe -fn FT -real         \ 
+| nmrPipe -fn PS -p0 -55.0 -p1 470.0           \ 
+| nmrPipe -fn REV -di  \ 
+| nmrPipe -fn TP     \ 
+| nmrPipe -fn POLY -auto  \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn POLY -auto   \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2a_hmqcjr_2.spa 
+rm -f temp 
+rm -f temp2 
+cp y2a_hmqcjr_2.spa ~/Sparky/Save/ 
+#
+
+===========================================================
+
+5) Heteronuclear 2-D HSMQC.
+
+For data acquired using TPPI for second dimension:
+
+#!/bin/csh 
+var2pipe -in ./y2a_hsmqc.var   \ 
+  -xN             2048   \ 
+  -yN              512   \ 
+  -xT             1024   \ 
+  -yT              512   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Real     \ 
+  -xSW         8500.000  \ 
+  -ySW         5000.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS          50.700  \ 
+  -xCAR           4.890  \ 
+  -yCAR          117.50  \ 
+  -xLAB              H1  \ 
+  -yLAB             N15  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+# | nmrPipe -fn SOL    \ 
+| nmrPipe -fn SP -off 0.02 -end 0.98 -pow 1 -c 0.7         \ 
+| nmrPipe -fn EM -lb 20.0     \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 90.0 -p1 -30.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.6ppm -xn 5.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.3 -end 0.98 -pow 1 -c 0.5         \ 
+| nmrPipe -fn FT -real         \ 
+| nmrPipe -fn PS -p0 -72.0 -p1 149.0           \ 
+| nmrPipe -fn REV -di  \ 
+| nmrPipe -fn TP     \ 
+| nmrPipe -fn POLY -auto  \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2a_hsmqc.spa 
+rm -f temp 
+rm -f temp2 
+cp y2a_hsmqc.spa ~/Sparky/Save/
+
+=========================================================== 
+6) C13-H1 HSQC (2-D) :
+
+For data acquired using "TPPI" method for the 2nd dimension:
+
+#!/bin/csh 
+var2pipe -in ./peng_10jul01_wt6.var   \ 
+  -xN             2048   \ 
+  -yN              512   \ 
+  -xT             1024   \ 
+  -yT              512   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Real     \ 
+  -xSW         6000.200  \ 
+  -ySW        25160.200  \ 
+  -xOBS         500.297  \ 
+  -yOBS         125.807  \ 
+  -xCAR           4.700  \ 
+  -yCAR           70.00  \ 
+  -xLAB              H1  \ 
+  -yLAB             C13  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp       \ 
+| nmrPipe -fn NULL       \ 
+| nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 -25.0 -p1 0.0 -di  \ 
+| nmrPipe -fn TP         \ 
+| nmrPipe -fn ZF -auto   \ 
+| nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \ 
+| nmrPipe -fn FT -real   \ 
+| nmrPipe -fn PS -p0 0.0  -p1 360.0   \ 
+| nmrPipe -fn REV -di    \ 
+| nmrPipe -fn POLY -auto \ 
+| nmrPipe -fn TP         \ 
+| nmrPipe -fn POLY -auto \ 
+| nmrPipe -fn TP         \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 peng_10jul01_wt6.spa 
+rm -f temp 
+rm -f temp2 
+#
+
+===========================================================
+
+7) 3-D HSQC-NOE :
+
+For data acquired using States method for the 2nd dimension (H1) 
+and sensitivity-enhanced States-TPPI for the 3rd dimension (N15). 
+Includes baseline correction.
+
+#!/bin/csh 
+var2pipe -in ./y2at_hqnoe.var   \ 
+  -xN             1024   \ 
+  -yN              256   \ 
+  -zN               64   \ 
+  -xT              512   \ 
+  -yT              128   \ 
+  -zT               32   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -zMODE      Rance-Kay  \ 
+  -xSW         6200.000  \ 
+  -ySW         6200.000  \ 
+  -zSW         1650.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -zOBS          50.700  \ 
+  -xCAR           4.914  \ 
+  -yCAR           4.914  \ 
+  -zCAR         118.700  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -zLAB             N15  \ 
+  -ndim               3  \ 
+  -aqORD              1  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+# 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.998 -pow 1 -c 1.0  \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 -104.0 -p1 0.0      \ 
+  | nmrPipe -fn EXT -x1 11.24ppm -xn 5.6ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft1 -z -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT    \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di         \ 
+  | nmrPipe -fn REV       \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -z -verb    \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft2 -y -verb   \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di   \ 
+  | nmrPipe -fn POLY -auto   \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -y -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2at_hqnoe.spa 
+cp y2at_hqnoe.spa ~/Sparky/Save/ 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+
+===========================================================
+
+8) 3-D HSQC-TOCSY :
+
+For data acquired using States method for the 2nd dimension (H1) 
+and sensitivity-enhanced States-TPPI for the 3rd dimension (N15). 
+Includes baseline correction.
+
+#!/bin/csh 
+var2pipe -in ./y2at_hqtoc.var   \ 
+  -xN             1024   \ 
+  -yN              256   \ 
+  -zN               64   \ 
+  -xT              512   \ 
+  -yT              128   \ 
+  -zT               32   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -zMODE      Rance-Kay  \ 
+  -xSW         6200.000  \ 
+  -ySW         6200.000  \ 
+  -zSW         1650.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -zOBS          50.700  \ 
+  -xCAR           4.914  \ 
+  -yCAR           4.914  \ 
+  -zCAR         118.700  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -zLAB             N15  \ 
+  -ndim               3  \ 
+  -aqORD              1  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+# 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.998 -pow 1 -c 1.0  \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 -104.0 -p1 0.0      \ 
+  | nmrPipe -fn EXT -x1 11.24ppm -xn 5.6ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft1 -z -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT    \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di         \ 
+  | nmrPipe -fn REV       \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -z -verb    \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft2 -y -verb   \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di   \ 
+  | nmrPipe -fn POLY -auto   \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -y -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2at_hqtoc.spa 
+cp y2at_hqtoc.spa ~/Sparky/Save/ 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+
+===========================================================
+
+9) 3-D HCCH-TOCSY :
+
+For data acquired using "TPPI" method for the 2nd & 3rd dimensions. 
+Includes baseline correction.
+
+#!/bin/csh 
+var2pipe -in ./y2a_hcch.var   \ 
+  -xN             1024   \ 
+  -yN              256   \ 
+  -zN               92   \ 
+  -xT              512   \ 
+  -yT              256   \ 
+  -zT               92   \ 
+  -xMODE        Complex  \ 
+  -yMODE           Real  \ 
+  -zMODE           Real  \ 
+  -xSW         5800.000  \ 
+  -ySW         5800.000  \ 
+  -zSW         8400.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -zOBS         125.800  \ 
+  -xCAR           4.914  \ 
+  -yCAR           4.914  \ 
+  -zCAR           43.10  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -zLAB             C13  \ 
+  -ndim               3  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 1.0         \ 
+# | nmrPipe -fn EM -lb 20.0      \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 146.0 -p1 0.0 -di         \ 
+  | nmrPipe -fn EXT -x1 6.0ppm -xn -0.5ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+  xyz2pipe -in temp_files/test%03d.ft1 -y -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 1.0         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT -real   \ 
+  | nmrPipe -fn PS -p0 0.0  -p1 0.0  -di         \ 
+  | nmrPipe -fn REV                             \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -y -verb    \ 
+# 
+  xyz2pipe -in temp_files/test%03d.ft2 -z -verb   \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 1.0        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT -real      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di   \ 
+  | nmrPipe -fn REV                       \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -z -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -y -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | nmrPipe -fn EXT -x1 6.0ppm -xn -0.5ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%3d.ft5 -y -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft5 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2a_hcch.spa 
+cp y2a_hcch.spa ~/Sparky/Save 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+
+===========================================================
+
+10) 3-D HNCA :
+
+For data acquired using States method for the 2nd dimension (C13) 
+and sensitivity-enhanced States-TPPI for the 3rd dimension (N15). 
+Includes baseline correction.
+
+#!/bin/csh 
+var2pipe -in ./y2a_hnca.var   \ 
+  -xN             1024   \ 
+  -yN              128   \ 
+  -zN               64   \ 
+  -xT              512   \ 
+  -yT               64   \ 
+  -zT               32   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -zMODE      Rance-Kay  \ 
+  -xSW         7650.000  \ 
+  -ySW         4000.000  \ 
+  -zSW         1650.200  \ 
+  -xOBS         500.297  \ 
+  -yOBS         125.800  \ 
+  -zOBS          50.700  \ 
+  -xCAR           4.915  \ 
+  -yCAR          54.000  \ 
+  -zCAR         119.200  \ 
+  -xLAB              H1  \ 
+  -yLAB             C13  \ 
+  -zLAB             N15  \ 
+  -ndim               3  \ 
+  -aqORD              1  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.4 -end 0.99 -pow 1 -c 1.0         \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 -102.0 -p1 0.0      \ 
+  | nmrPipe -fn EXT -x1 12.54ppm -xn 5.6ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft1 -z -verb  \ 
+  | nmrPipe -fn SP -off 0.3 -end 0.99 -pow 1 -c 0.6         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT    \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di         \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -z -verb    \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft2 -y -verb   \ 
+  | nmrPipe -fn SP -off 0.3 -end 0.99 -pow 1 -c 0.6        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 -0.0  -di   \ 
+# | nmrPipe -fn POLY -auto    \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -y -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2a_hnca.spa 
+cp y2a_hnca.spa ~/Sparky/Save/ 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+
+===========================================================
+
+11) 3-D HACACBCO (TPPI in 2nd and 3rd dimensions). 
+Includes baseline correction.
+
+#!/bin/csh 
+var2pipe -in ./y2a_hacacbco.var   \ 
+  -xN             1024   \ 
+  -yN              120   \ 
+  -zN               60   \ 
+  -xT              512   \ 
+  -yT              120   \ 
+  -zT               60   \ 
+  -xMODE        Complex  \ 
+  -yMODE           Real  \ 
+  -zMODE           Real  \ 
+  -xSW         5000.000  \ 
+  -ySW         8400.000  \ 
+  -zSW         1950.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         125.800  \ 
+  -zOBS         125.800  \ 
+  -xCAR           4.914  \ 
+  -yCAR          43.100  \ 
+  -zCAR          172.40  \ 
+  -xLAB              H1  \ 
+  -yLAB            CACB  \ 
+  -zLAB              CO  \ 
+  -ndim               3  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 1.0         \ 
+# | nmrPipe -fn EM -lb 20.0      \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 142.0 -p1 0.0 -di         \ 
+  | nmrPipe -fn EXT -x1 6.0ppm -xn 2.5ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+  xyz2pipe -in temp_files/test%03d.ft1 -y -verb  \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT -real   \ 
+  | nmrPipe -fn PS -p0 0.0  -p1 0.0  -di         \ 
+  | nmrPipe -fn REV                             \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -y -verb    \ 
+# 
+  xyz2pipe -in temp_files/test%03d.ft2 -z -verb   \ 
+  | nmrPipe -fn SP -off 0.36 -end 0.99 -pow 1 -c 0.6        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT -real      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di   \ 
+  | nmrPipe -fn REV                       \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -z -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2a_hacacbco.spa 
+cp y2a_hacacbco.spa ~/Sparky/Save 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+
+===========================================================

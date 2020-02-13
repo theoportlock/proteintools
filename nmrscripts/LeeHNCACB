@@ -1,0 +1,79 @@
+#!/bin/csh
+
+# Turns these options on/off depending on what you want to do, for example processing/phasing the direct dimension before processing the indirect.
+
+set CONVERSION = y
+set PROCESS_direct = y
+set PROCESS_indirect = y
+set PROJECTIONS = y
+
+# This is the script copied and pasted from the bruker command.
+# Scroll to the bottom of the pulse-program you used, there should be some comments there telling you the correct -ymode and -zmode
+
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -AMX -decim 1792 -dspfvs 20 -grpdly 67.9841766357422  \
+  -xN              2048  -yN               112  -zN               400  \
+  -xT              1024  -yT                56  -zT               200  \
+  -xMODE            DQD  -yMODE  Echo-AntiEcho  -zMODE        Complex  \
+  -xSW        11160.714  -ySW         2594.707  -zSW        12690.355  \
+  -xOBS         800.324  -yOBS          81.105  -zOBS         201.249  \
+  -xCAR           4.916  -yCAR         118.586  -zCAR          39.398  \
+  -xLAB              HN  -yLAB             15N  -zLAB             13C  \
+  -ndim               3  -aq2D          States                         \
+  -out ./fid/test%03d.fid -verb -ov
+
+endif
+
+# This direct dimension is your classic 1D processing
+
+
+if ($PROCESS_direct == 'y') then
+
+rm -fr ft1/test*.ft1
+
+xyz2pipe -in fid/test%03d.fid                           \
+| nmrPipe  -fn POLY -time                             \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5      \
+| nmrPipe  -fn ZF -zf 1 -auto                           \
+| nmrPipe  -fn FT -verb                                      \
+| nmrPipe  -fn EXT -x1 12ppm -xn 3.75ppm -sw -round 2    \
+| nmrPipe  -fn PS -p0 52.0 -p1 0 -di                    \
+| pipe2xyz -ov -out ft1/test%04d.ft1 -z
+
+endif
+
+# Below are both the 2D and 3D processing parts.
+
+
+if ($PROCESS_indirect == 'y') then
+
+rm -fr ft3/test*.ft3
+
+xyz2pipe -in ft1/test%04d.ft1 -x -verb                      \
+| nmrPipe  -fn ZF -zf 2 -auto                           \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 1     \
+| nmrPipe  -fn FT -auto                                     \
+| nmrPipe  -fn PS -p0 0 -p1 0 -di                      \
+| nmrPipe  -fn TP                                       \
+| nmrPipe  -fn ZF -zf 2 -auto                           \
+| nmrPipe  -fn SP -off 0.5 -end 0.98 -pow 1     \
+| nmrPipe  -fn FT -alt                                     \
+| nmrPipe  -fn PS -p0 0 -p1 0 -di                    \
+| nmrPipe  -fn TP                                       \
+| nmrPipe  -fn ZTP                                      \
+| nmrPipe  -fn POLY -auto -ord 2                        \
+> data.pipe
+cat data.pipe | pipe2xyz -out ft3/HNCACB%04d.ft3 -x -inPlace
+endif
+
+
+# These projections bascailly concatenate the individual 3D planes onto one spectrum, which I find really useful for judging the quality of the processing
+
+if ($PROJECTIONS == 'y') then
+
+proj3D.tcl -in ft3/HNCACB%04d.ft3
+
+endif
+
+

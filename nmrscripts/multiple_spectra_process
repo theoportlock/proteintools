@@ -1,0 +1,53 @@
+#! /bin/csh -f
+# Multiple spectral processing (in this case HSQCs) to be used from within the experiment folder from which you phased and processed
+# Hopefully this isn't a pile of shit, but we haven't used shell scripts much before....
+
+## Creating a range of experiments of which to process
+echo "For the purposes of creating a correct range, please input the first experiment you want to process: "
+@ first_experiment = $<
+echo "Now, enter the last experiment in the range, and I'll check for the HSQCs":
+@ last_experiment = $<
+echo "Your range is $first_experiment to $last_experiment"
+echo "What is the name of your bruker processing file (full name including .com)"
+set processing_file = $<
+## Setting current directory
+set project_dir=`readlink -f "$0"`
+echo $project_dir
+set dir_path=`dirname "$project_dir"`
+echo $dir_path
+set command_file = $dir_path/$processing_file
+
+## Gathering pulse sequence identifier to operate only on experiments of the same pulse program - may want to make this even more stringent?
+set pulse_seqeunce=`head -n 1 pulseprogram`
+
+
+
+cd ../
+
+#set le_date = `date`
+#set a = ( $le_date )
+#set prefix = ( ${a[1-4]} )
+#echo $prefix
+
+mkdir "$prefix"_processed_spectra
+
+# Looping through all experiments to find ones of interest - Could be done much faster with list matching but hey, fuck it. Infact, this is an abomination of a loop.
+foreach i (*) # For all experiment directories
+	echo $i
+	if ($i >= $first_experiment) then # 
+		if ($i <= $last_experiment) then 
+			#echo "$i is bloody within the limits m8"
+			cd $i # change to experimental directory
+			pwd # print current directory
+			set currentpulseprogram=`head -n 1 pulseprogram` # Find out what the experimental pulse program is
+			if ("$pulse_seqeunce" == "$currentpulseprogram") then #If experiments are the same then (i.e not 1d/relazation)
+				cp $command_file . #copy the conversion command to the directory
+				$command_file # execute the conversion command
+				pipe2ucsf HSQC.ft2 "$i"_HSQC.ucsf #Convert to ucsf and store with a experiment number indexer
+			endif
+			cd ../ #Go back to experimental list of directories for repetition of the loop
+		endif
+	endif
+end
+
+done
