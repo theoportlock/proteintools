@@ -1,2 +1,2 @@
 #!/bin/bash
-pymol -cq ~/proteintools/pymolscripts/$1 -- ${@:2}
+pymol -cq ~/proteintools/scripts/$1 -- ${@:2}

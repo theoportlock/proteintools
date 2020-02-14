@@ -1,8 +1,9 @@
 import pymol
-import os
 from numpy import nan
+import os
 import sys
 import pandas as pd
+from sklearn import preprocessing
 from pymol import cmd, stored, math
 
 pymol.finish_launching()
@@ -12,14 +13,18 @@ mol=os.path.splitext(sys.argv[1])[0]
 sourcecsv = sys.argv[2]
 
 df = pd.read_csv(sourcecsv)
+
 resi = list(df)[0]
 df[resi] = df[resi].astype('int')
-val = list(df)[1]
+val = list(df)[3]
+
 
 obj=cmd.get_object_list(mol)[0]
 
 cmd.alter(mol,"b=0.0")
 
 for row in df.index:	
-    cmd.alter("resi %s"%df[resi][row], "b=%s"%df[val][row])
+    newval = round((df[val][row]-df[val].min())/(df[val].max() - df[val].min()),4)
+    cmd.alter("resi %s"%df[resi][row], "b=%s"%newval)
+cmd.spectrum("b","blue_red",minimum=0,maximum=1)
 cmd.save(mol+"_bfacts.pdb")
