@@ -26,12 +26,12 @@ for i in df[0][x]:
 
 '''
 
-'''
 print(big_df["Molar Excess"].unique())
 print(big_df[x].unique())
 '''
 for i in big_df[x].unique():
-        ax.plot(big_df["Molar Excess"].unique(), big_df[i][y].get_group(i)-big_df[0][y])
+        ax.plot(big_df["Molar Excess"].unique(), big_df[i][y]-big_df[0][y])
+'''
 
 ax.set(ylabel=y) 
 plt.xticks(rotation=90)
