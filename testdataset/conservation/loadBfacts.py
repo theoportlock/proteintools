@@ -3,7 +3,6 @@ from numpy import nan
 import os
 import sys
 import pandas as pd
-from sklearn import preprocessing
 from pymol import cmd, stored, math
 
 pymol.finish_launching()
