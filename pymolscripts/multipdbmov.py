@@ -3,7 +3,7 @@ from glob import glob
 	
 def multipdbmov ():
 
-    file_list = glob("mov*.pdb"):
+    file_list = glob("cluster*.pdb")
 
     for file in file_list
        cmd.load(file,"mov")
