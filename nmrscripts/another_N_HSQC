@@ -1,0 +1,38 @@
+#!/bin/csh 
+var2pipe -in ./y2at_hsqc1.var   \ 
+  -xN             2048   \ 
+  -yN              512   \ 
+  -xT             1024   \ 
+  -yT              256   \ 
+  -xMODE        Complex  \ 
+  -yMODE      Rance-Kay  \ 
+  -xSW         8500.000  \ 
+  -ySW         5000.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS          50.700  \ 
+  -xCAR           4.800  \ 
+  -yCAR         121.000  \ 
+  -xLAB              H1  \ 
+  -yLAB             N15  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+ nmrPipe -in ./temp   \ 
+| nmrPipe -fn SOL      \ 
+| nmrPipe -fn SP -off 0.02 -end 0.999 -pow 1 -c 1.0   \ 
+| nmrPipe -fn EM -lb 22      \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 270.0 -p1 -55.0 -di    \ 
+| nmrPipe -fn TP     \ 
+| nmrPipe -fn ZF -auto    \ 
+| nmrPipe -fn SP -off 0.14 -end 0.999 -pow 1 -c 0.5   \ 
+| nmrPipe -fn EM -lb 3    \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 0.0  -p1 0.0  -di   \ 
+| nmrPipe -fn REV     \ 
+| nmrPipe -fn POLY -auto  \ 
+  -out ./temp2 -verb -ov 
+# 
+pipe2ucsf temp2 y2at_hsqc1.spa 
+rm -f temp 
+rm -f temp2 
+#
