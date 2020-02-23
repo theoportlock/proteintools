@@ -1,10 +1,8 @@
 #!/bin/csh
-#
+
 set CONVERSION = y
 set PROCESSING = y
-#
-# 1. data conversion
-#
+
 if ($CONVERSION == 'y') then
 bruk2pipe -in ./ser \
   -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
@@ -18,9 +16,7 @@ bruk2pipe -in ./ser \
   -ndim               2  -aq2D          States  \
       -ov -out ./cbhd.fid -verb
 endif
-# 
-# 2. processing
-#
+
 if ($PROCESSING == 'y') then
    nmrPipe -in ./cbhd.fid                 \
    |   nmrPipe -fn SP -off 0.5 -end 0.98 -c 0.5\
@@ -37,4 +33,3 @@ if ($PROCESSING == 'y') then
    |   nmrPipe -fn CS -ls 2.4ppm -sw         \
    |   nmrPipe -ov -verb -out cbhd.ft2 
 endif
-

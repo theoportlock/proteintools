@@ -1,0 +1,40 @@
+#!/bin/csh 
+var2pipe -in ./y2at_wtoc2.var   \ 
+  -xN             2048   \ 
+  -yN              600   \ 
+  -xT             1024   \ 
+  -yT              300   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -xSW         7800.000  \ 
+  -ySW         7800.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS         500.297  \ 
+  -xCAR           4.920  \ 
+  -yCAR           4.920  \ 
+  -xLAB              H1  \ 
+  -yLAB              H1  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+# | nmrPipe -fn SOL      \ 
+| nmrPipe -fn SP -off 0.02 -end 0.99 -pow 1 -c 0.9         \ 
+| nmrPipe -fn EM -lb 22.0     \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 100.0 -p1 -60.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.5 -end 0.99 -pow 1 -c 0.5         \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 0.0  -p1 0.0  -di         \ 
+| nmrPipe -fn EXT -x1 12.5ppm -xn -0.5ppm -sw -round   \ 
+| nmrPipe -fn POLY -auto    \ 
+| nmrPipe -fn TP            \ 
+| nmrPipe -fn POLY -auto    \ 
+| nmrPipe -fn TP            \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2at_wtoc2.spa 
+rm -f temp 
+rm -f temp2 
+cp y2at_wtoc2.spa ~/Sparky/Save/
