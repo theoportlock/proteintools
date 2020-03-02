@@ -2,15 +2,13 @@
 import sys
 import pandas as pd
 import matplotlib.pyplot as plt
-import numpy as np
+import os
 
 file = sys.argv[1]
-df = pd.read_csv(file,header=[1,2],sep="\t")
+df = pd.read_csv(file,header=[1,2],encoding='UTF-16',sep="\t")
 a = df.columns.get_level_values(0)
 b = df.columns.get_level_values(1)
 df.columns = [a.to_series().mask(lambda x: x.str.startswith('Unnamed')).ffill(), b]
-
-print(df.info())
 
 fig, ax = plt.subplots(1,1)
 
@@ -22,4 +20,4 @@ ax.set(ylabel=y)
 plt.xticks(rotation=90)
 plt.xlabel(x)
 plt.tight_layout()
-plt.savefig("output.svg")
+plt.savefig(os.path.splitext(file)[0]+".svg")
