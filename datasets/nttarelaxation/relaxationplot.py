@@ -5,9 +5,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-df1 = pd.read_csv(sys.argv[1])
-df2 = pd.read_csv(sys.argv[2])
-df3 = pd.read_csv(sys.argv[3])
+df1 = pd.read_csv("t1params.csv")
+df2 = pd.read_csv("t2params.csv")
+df3 = pd.read_csv("noeparams.csv")
 
 fig, axs = plt.subplots(3,1, sharex=True)
 
@@ -19,4 +19,6 @@ axs[1].set(ylabel="R2")
 axs[2].set(ylabel="NOE") 
 plt.xticks(rotation=90)
 plt.xlabel("Residue Number")
-plt.savefig("relaxation.svg", format="svg")
+plt.tight_layout()
+#plt.savefig("relaxation.svg", format="svg")
+plt.show()
