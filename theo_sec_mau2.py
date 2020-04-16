@@ -16,8 +16,8 @@ x = list(df)[0]
 y = list(df)[1]
 
 ax.plot(df[x], df[y])
-ax.set(ylabel=y) 
+ax.set(ylabel="Absorbance at 260 nm ") 
 plt.xticks(rotation=90)
-plt.xlabel(x)
+plt.xlabel("Elution Volume / " + x[1])
 plt.tight_layout()
 plt.savefig(os.path.splitext(file)[0]+".svg")
