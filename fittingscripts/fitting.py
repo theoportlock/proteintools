@@ -1,28 +1,69 @@
 #!/usr/bin/env python
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import sympy
 from scipy.optimize import curve_fit
 
-a,b,c,x,y = sympy.symbols("a,b,c,x,y")
-
 def make_f2opt(lambdified): return lambda *args : lambdified(*args)
-eq = sympy.Eq(y, c / (1 + sympy.exp(-b*(x-a))))
-eqy = sympy.lambdify((x,a,b,c),sympy.solve(eq,y)[0])
+# normal curve
+'''
+a,b,c,x,y = sympy.symbols("a,b,c,x,y")
+eq = sympy.Eq(y, a*sympy.exp(-c*(b-x)**2))
+eqy = sympy.solve(eq,y)[0]
+function = sympy.lambdify((x,a,b,c),eqy)
 eqy2opt = make_f2opt(eqy)
-xdata = np.array([400, 600, 800, 1000, 1200, 1400, 1600])
-ydata = np.array([0, 0, 0.13, 0.35, 0.75, 0.89, 0.91])
+'''
 
+# growth curve
+'''
+a,b,c,x,y = sympy.symbols("a,b,c,x,y")
+eq = sympy.Eq(y, c / (1 + sympy.exp(-b*(x-a))))
+eqy = sympy.solve(eq,y)[0]
+function = sympy.lambdify((x,a,b,c),eqy)
+eqy2opt = make_f2opt(function)
+'''
+
+# exponential decay
+'''
+a,b,c,x,y = sympy.symbols("a,b,c,x,y")
+eq = sympy.Eq(y, a*sympy.exp(-b*x)+c)
+eqy = sympy.solve(eq,y)[0]
+function = sympy.lambdify((x,a,b,c),eqy)
+eqy2opt = make_f2opt(function)
+'''
+
+file = sys.argv[1]
+df = pd.read_csv(file)
+xdata = df[list(df)[0]]
+ydata = df[list(df)[1]]
+
+x = np.linspace(0, 2.5, 50)
+
+# curve_fit
+'''
 popt, pcov = curve_fit(eqy2opt, xdata, ydata, p0=[1000, 0.001, 1])
+y = function(x, *popt)
+'''
+
+# polyfit
+'''
+popt, pcov = np.polyfit(xdata, ydata, 5 , cov=True)
+function = np.poly1d(popt)
+y = function(x)
+'''
 
 print(popt)
+psigma = np.sqrt(np.diag(pcov))
+print(psigma)
 
-x = np.linspace(-1, 2000, 50)
-y = eqy(x, *popt)
+# error tube
+ylower = function(x,popt[0]+psigma[0],popt[1]+psigma[1],popt[2]-psigma[2])
+yupper = function(x,popt[0]-psigma[0],popt[1]-psigma[1],popt[2]+psigma[2])
+plt.fill_between(x,ylower,yupper,color='grey',alpha=0.5)
 
-plt.plot(xdata, ydata, 'o', label='data')
+plt.plot(xdata, ydata, label='data')
 plt.plot(x,y, label='fit')
-plt.ylim(0, 1.05)
 plt.legend(loc='best')
 plt.show()
-#plt.savefig("test.svg")
+#plt.savefig(os.path.splitext(file)[0]+".svg")
