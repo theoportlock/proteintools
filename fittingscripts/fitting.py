@@ -26,10 +26,10 @@ eqy2opt = make_f2opt(function)
 
 # exponential decay
 '''
-a,b,c,x,y = sympy.symbols("a,b,c,x,y")
-eq = sympy.Eq(y, a*sympy.exp(-b*x)+c)
-eqy = sympy.solve(eq,y)[0]
-function = sympy.lambdify((x,a,b,c),eqy)
+A,B,C,X,Y = sympy.symbols("a,b,c,x,y")
+eq = sympy.Eq(Y, A*sympy.exp(-B*X)+C)
+eqy = sympy.solve(eq,Y)[0]
+function = sympy.lambdify((X,A,B,C),eqy)
 eqy2opt = make_f2opt(function)
 '''
 

@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
+import sys
 from Bio import SeqIO
 from Bio.Alphabet import generic_dna, generic_protein
 from Bio.Blast import NCBIWWW, NCBIXML
 
-ntta = SeqIO.read("ntta.fasta", "fasta")
+sequence = SeqIO.read(sys.argv[1], "fasta")
 
-myntta = Seq("MAHHHHHHVDDDDKMEDTANPNEMTKDAWLNSMTPLLPDLICKGFIQDPDLKKRFDEIKMTYEQCVTLIPESTKKCQDELYASMPDKINSETAGTWGRSLGECIGKDFAEKHLIPK", generic_protein)
-
-reshandle = NCBIWWW.qblast("blastn", "nt", ntta.seq)
+reshandle = NCBIWWW.qblast("blastn", "nt", sequence.seq)
 blast_result = NCBIXML.parse(reshandle)
             
 for b in blast_result:
