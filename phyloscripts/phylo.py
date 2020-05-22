@@ -9,7 +9,6 @@ from Bio.Phylo.Applications import PhymlCommandline
 from Bio import Phylo
 import sys
 
-'''
 # First argument being the fasta
 query_fname = sys.argv[1]
 result_handle, error_handle = NCBIStandalone.blastall('/usr/bin/blastall', 'blastp',
@@ -29,7 +28,6 @@ cmdline()
 AlignIO.convert('blasted_' + query_fname + '.aln', "clustal",'blasted_' + query_fname + '.phy', "phylip-relaxed")
 cmdline = PhymlCommandline(input='blasted_' + query_fname + '.phy', datatype='aa', model='WAG', alpha='e', bootstrap=100)
 ouk_log, err_log = cmdline()
-'''
 
 egfr_tree = Phylo.read("egfr-family.phy_phyml_tree.txt", "newick")
 Phylo.draw_ascii(egfr_tree)

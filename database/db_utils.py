@@ -7,7 +7,7 @@ def db_connect(db_path=DEFAULT_PATH):
     con = sqlite3.connect(db_path)
     return con
 
-def create_customer(con, first_name, last_name):
+def new_plasmid(con, first_name, last_name):
     sql = """
         INSERT INTO customers (first_name, last_name)
         VALUES (?, ?)"""
