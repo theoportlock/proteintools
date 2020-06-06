@@ -4,7 +4,9 @@ from pydna.genbank import Genbank
 
 gb = Genbank("zn.tportlock@gmail.com")
 
-lgenome = gb.nucleotide("NC_002942.5")
-SeqIO.write(lgenome, "lgenome.fasta", "fasta")
-ntta = gb.nucleotide("LN901282")
-SeqIO.write(ntta, "ntta.fasta", "fasta")
+#genome = gb.nucleotide("NC_002942.5")
+genome = gb.nucleotide("NZ_CAFM00000000.1")
+print(genome)
+#SeqIO.write(genome, "lgenome.fasta", "fasta")
+#ntta = gb.nucleotide("LN901282")
+#SeqIO.write(ntta, "ntta.fasta", "fasta")
