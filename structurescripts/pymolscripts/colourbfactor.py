@@ -11,8 +11,6 @@ def loadBfacts (mol,startaa=1,source="newBfactors.csv", visual="Y"):
 	counter=int(startaa)
 	bfacts=[]
 
-
-
 	for line in inFile.readlines():	
 		bfact=float(line)
 		bfacts.append(bfact)

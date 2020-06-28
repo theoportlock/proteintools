@@ -8,10 +8,18 @@ from scipy.optimize import curve_fit
 def make_f2opt(lambdified): return lambda *args : lambdified(*args)
 # normal curve
 '''
-a,b,c,x,y = sympy.symbols("a,b,c,x,y")
-eq = sympy.Eq(y, a*sympy.exp(-c*(b-x)**2))
-eqy = sympy.solve(eq,y)[0]
-function = sympy.lambdify((x,a,b,c),eqy)
+A,B,X,Y = sympy.symbols("a,b,x,y")
+eq = sympy.Eq(Y, ((1/(A*sympy.sqrt(2*sympy.pi)))*sympy.exp(-0.5*((X-B)/A)**2)))
+eqy = sympy.solve(eq,Y)[0]
+function = sympy.lambdify((X,A,B),eqy)
+eqy2opt = make_f2opt(eqy)
+'''
+
+# old normal curve
+'''
+A,B,C,X,Y = sympy.symbols("A,B,C,X,Y") eq = sympy.Eq(Y, A*sympy.exp(-C*(B-X)**2))
+eqy = sympy.solve(eq,Y)[0]
+function = sympy.lambdify((X,A,B,C),eqy)
 eqy2opt = make_f2opt(eqy)
 '''
 
