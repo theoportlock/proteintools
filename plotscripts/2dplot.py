@@ -4,7 +4,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import os
 
-df = pd.read_csv(sys.argv[1])
+#df = pd.read_csv(sys.argv[1])
+df = pd.read_csv("analysis_mean.csv")
 x = list(df)[0]
 y = list(df)[1]
 
