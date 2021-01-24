@@ -1,4 +1,9 @@
 from Bio import SeqIO
+import sys
+
+record = SeqIO.read(sys.argv[1], "fasta")
+table = 11
+min_pro_len = 100
 
 def find_orfs_with_trans(seq, trans_table, min_protein_length):
     answer = []
@@ -26,11 +31,9 @@ def find_orfs_with_trans(seq, trans_table, min_protein_length):
     return answer
 
 
-if __name__=="__main__":
-    record = SeqIO.read("NC_005816.gb", "genbank")
-    table = 15
-    min_pro_len = 100
-
-    orf_list = find_orfs_with_trans(record.seq, table, min_pro_len)
-    for start, end, strand, pro in orf_list:
-        print("%s...%s - length %i, strand %i, %i:%i" % (pro[:30], pro[-3:], len(pro), strand, start, end))
+orf_list = find_orfs_with_trans(record.seq, table, min_pro_len)
+for start, end, strand, pro in orf_list:
+    print(
+        "%s...%s - length %i, strand %i, %i:%i"
+        % (pro[:30], pro[-3:], len(pro), strand, start, end)
+    )

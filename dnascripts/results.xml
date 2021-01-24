@@ -2,10 +2,10 @@
 <!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
 <BlastOutput>
   <BlastOutput_program>blastn</BlastOutput_program>
-  <BlastOutput_version>BLASTN 2.10.1+</BlastOutput_version>
+  <BlastOutput_version>BLASTN 2.11.0+</BlastOutput_version>
   <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
   <BlastOutput_db>nt</BlastOutput_db>
-  <BlastOutput_query-ID>Query_1929</BlastOutput_query-ID>
+  <BlastOutput_query-ID>Query_12161</BlastOutput_query-ID>
   <BlastOutput_query-def>No definition line</BlastOutput_query-def>
   <BlastOutput_query-len>378</BlastOutput_query-len>
   <BlastOutput_param>
@@ -21,7 +21,7 @@
 <BlastOutput_iterations>
 <Iteration>
   <Iteration_iter-num>1</Iteration_iter-num>
-  <Iteration_query-ID>Query_1929</Iteration_query-ID>
+  <Iteration_query-ID>Query_12161</Iteration_query-ID>
   <Iteration_query-def>No definition line</Iteration_query-def>
   <Iteration_query-len>378</Iteration_query-len>
 <Iteration_hits>
@@ -1287,6 +1287,34 @@
 </Hit>
 <Hit>
   <Hit_num>46</Hit_num>
+  <Hit_id>gi|1910787595|gb|CP061840.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain AW-13-4 chromosome, complete genome</Hit_def>
+  <Hit_accession>CP061840</Hit_accession>
+  <Hit_len>3512088</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1439767</Hsp_hit-from>
+      <Hsp_hit-to>1439390</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
   <Hit_id>gi|53749768|emb|CR628336.1|</Hit_id>
   <Hit_def>Legionella pneumophila str. Paris complete genome</Hit_def>
   <Hit_accession>CR628336</Hit_accession>
@@ -1314,7 +1342,7 @@
   </Hit_hsps>
 </Hit>
 <Hit>
-  <Hit_num>47</Hit_num>
+  <Hit_num>48</Hit_num>
   <Hit_id>gi|971459724|emb|LN901266.1|</Hit_id>
   <Hit_def>Legionella pneumophila subsp. pneumophila nttA pseudogene, strain ATCC_33823</Hit_def>
   <Hit_accession>LN901266</Hit_accession>
@@ -1342,7 +1370,7 @@
   </Hit_hsps>
 </Hit>
 <Hit>
-  <Hit_num>48</Hit_num>
+  <Hit_num>49</Hit_num>
   <Hit_id>gi|1103998197|emb|LT632615.1|</Hit_id>
   <Hit_def>Legionella pneumophila strain ST23 genome assembly, chromosome: 1</Hit_def>
   <Hit_accession>LT632615</Hit_accession>
@@ -1370,7 +1398,7 @@
   </Hit_hsps>
 </Hit>
 <Hit>
-  <Hit_num>49</Hit_num>
+  <Hit_num>50</Hit_num>
   <Hit_id>gi|971459735|emb|LN901272.1|</Hit_id>
   <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_43736</Hit_def>
   <Hit_accession>LN901272</Hit_accession>
@@ -1397,39 +1425,11 @@
     </Hsp>
   </Hit_hsps>
 </Hit>
-<Hit>
-  <Hit_num>50</Hit_num>
-  <Hit_id>gi|971459717|emb|LN901262.1|</Hit_id>
-  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_33155</Hit_def>
-  <Hit_accession>LN901262</Hit_accession>
-  <Hit_len>378</Hit_len>
-  <Hit_hsps>
-    <Hsp>
-      <Hsp_num>1</Hsp_num>
-      <Hsp_bit-score>655.909</Hsp_bit-score>
-      <Hsp_score>726</Hsp_score>
-      <Hsp_evalue>0</Hsp_evalue>
-      <Hsp_query-from>1</Hsp_query-from>
-      <Hsp_query-to>378</Hsp_query-to>
-      <Hsp_hit-from>1</Hsp_hit-from>
-      <Hsp_hit-to>378</Hsp_hit-to>
-      <Hsp_query-frame>1</Hsp_query-frame>
-      <Hsp_hit-frame>1</Hsp_hit-frame>
-      <Hsp_identity>372</Hsp_identity>
-      <Hsp_positive>372</Hsp_positive>
-      <Hsp_gaps>0</Hsp_gaps>
-      <Hsp_align-len>378</Hsp_align-len>
-      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
-      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAGAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATACCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
-      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
-    </Hsp>
-  </Hit_hsps>
-</Hit>
 </Iteration_hits>
   <Iteration_stat>
     <Statistics>
-      <Statistics_db-num>58630843</Statistics_db-num>
-      <Statistics_db-len>286549312121</Statistics_db-len>
+      <Statistics_db-num>66628201</Statistics_db-num>
+      <Statistics_db-len>359855517142</Statistics_db-len>
       <Statistics_hsp-len>0</Statistics_hsp-len>
       <Statistics_eff-space>0</Statistics_eff-space>
       <Statistics_kappa>0.41</Statistics_kappa>

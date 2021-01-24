@@ -8,11 +8,11 @@ from Bio.SeqRecord import SeqRecord
 from Bio.Restriction import Restriction
 from Bio.Alphabet import generic_dna, generic_protein
 
-lgenome = SeqIO.read("../lgenome.fasta", "fasta")
+lgenome = SeqIO.read("lgenome.fasta", "fasta")
 lgenome = Dseqrecord(lgenome,circular=True)
 
 protein = "fixedLspCTMHRHR"
-df = pd.read_csv('../primers.csv',usecols = ["Name","Complete sequence"])
+df = pd.read_csv('primers.csv',usecols = ["Name","Complete sequence"])
 primers = df.loc[(df["Name"]==protein+" F") | (df["Name"]==protein+" R")]["Complete sequence"].values
 
 fprimer = Seq(primers[0])

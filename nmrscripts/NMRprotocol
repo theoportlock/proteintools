@@ -1,0 +1,91 @@
+Error box you can ignore
+Pass: topspin
+EDC - makes new project
+Rpar - is read params (K_zgCN)
+Sample in then
+-ij
+lock
+Atma
+Topshim gui
+tso - for gradient shimming
+pulsecal - calibrates pulse and finds 90
+P1= 0.5
+Zg: efp0
+Zoom to region and Dpl1
+Popt 33:40 zero pthe. 
+Rpar K_zgesgp
+Getprosol 1H 8.99 -10.3
+Rga
+Zg
+Spk0
+For hsqc:
+If carbon labelled too then change zgotpns -DLABEL_CN
+
+Rpar k* will list all experiment
+
+Stsi 1024 for processing to cut in half the spectrum
+
+Sin0
+-------------
+
+Change temp by double clicking temp
+In xspec open 1D
+First check wobb
+Then lock
+DS set to 0, NS to 1
+Make sure mode is 'zg' (pulprog zg)
+Zoom to peak and set spec width with dp1
+Popt to optimise - tick overight -p1 (30-50-1us incr)
+Startval (x previous p1 by 4) (to account for relaxation)
+Poptholt to stop
+Do same for sp1 and for spdb1 for water suppression
+Stdisp for then chose analyse waveform icon and integrate shape and sinc
+Pulprog zgesgp
+Change spw to the value at bottom
+Topshim tuneaxyz
+Topshim shigami for z
+Drag 2D spectra
+Feed in optimised P1 and spw values
+Can run another job,
+
+Sx 18
+topspim shigemi tuneaxyz
+amta tunes nitrogen
+
+Rpar for read parameter set (experiments)
+------------
+
+Set temp
+Put sample in
+Wait a bit and lock (5 mins)
+Tune and match
+Topshim GUI
+Pulse calibration (look at P1) (know what 90degree at 7 watts)
+Load parameter set
+Getprosol
+RGA
+zg
+
+qu zg adds to que
+----------------------
+
+Check temp (310K)
+'Lift on' control panel (top left)
+File in xspec and in iconnmr
+Type 'lock' to 10% d2O
+Shimming has to be done but not tune
+Wobb to check shim
+Stop to stop
+Topshim GUI
+Keep shimming until levels look good
+zg
+
+--------------
+
+Start by ejecting the previous sample
+Inject your sample into the magnet
+Lock onto your conditions
+Tune the radio waves into the frequency of each of the atoms
+Shim the sample until hz = 0.1 and 0.5
+Use the xaua macro
+fill this in more specifically at another time when your brain is not absolutely wasted

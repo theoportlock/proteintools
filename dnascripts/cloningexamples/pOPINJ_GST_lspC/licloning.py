@@ -14,7 +14,7 @@ genome = Dseqrecord(genome,circular=True)
 protein = "LspC-GST-fixed"
 #protein = "10421"
 
-df = pd.read_csv('../primers.csv',usecols = ["Name","Complete sequence"])
+df = pd.read_csv('primers.csv',usecols = ["Name","Complete sequence"])
 primers = df.loc[(df["Name"]==protein+" F") | (df["Name"]==protein+" R")]["Complete sequence"].values
 
 fprimer = Seq(primers[0])

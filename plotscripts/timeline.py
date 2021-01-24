@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+import matplotlib.pyplot as plt
+import pandas as pd
+
 def GenerateTimeLine(data, day_interval=5):
     ''' Makes a timeline based on a csv file with the first and second column being date and name respectively '''
     pd.plotting.register_matplotlib_converters()
@@ -16,8 +20,6 @@ def GenerateTimeLine(data, day_interval=5):
     return ax
 
 if __name__ == "__main__":
-    import matplotlib.pyplot as plt
-    import pandas as pd
     df = pd.read_csv("testdata.csv", index_col="date", parse_dates=True, infer_datetime_format=True)
     GenerateTimeLine(df)
     plt.show()
