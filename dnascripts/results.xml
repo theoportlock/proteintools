@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastn</BlastOutput_program>
+  <BlastOutput_version>BLASTN 2.11.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>nt</BlastOutput_db>
+  <BlastOutput_query-ID>Query_12161</BlastOutput_query-ID>
+  <BlastOutput_query-def>No definition line</BlastOutput_query-def>
+  <BlastOutput_query-len>378</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_sc-match>2</Parameters_sc-match>
+      <Parameters_sc-mismatch>-3</Parameters_sc-mismatch>
+      <Parameters_gap-open>5</Parameters_gap-open>
+      <Parameters_gap-extend>2</Parameters_gap-extend>
+      <Parameters_filter>L;m;</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_12161</Iteration_query-ID>
+  <Iteration_query-def>No definition line</Iteration_query-def>
+  <Iteration_query-len>378</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|971459753|emb|LN901282.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ice_30</Hit_def>
+  <Hit_accession>LN901282</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>682.96</Hsp_bit-score>
+      <Hsp_score>756</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>378</Hsp_identity>
+      <Hsp_positive>378</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|1539468054|emb|LR134176.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain NCTC12179 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LR134176</Hit_accession>
+  <Hit_len>3524068</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>678.451</Hsp_bit-score>
+      <Hsp_score>751</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>792243</Hsp_hit-from>
+      <Hsp_hit-to>791866</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>377</Hsp_identity>
+      <Hsp_positive>377</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|1104004976|emb|LT632617.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain ST42 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LT632617</Hit_accession>
+  <Hit_len>3430562</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>678.451</Hsp_bit-score>
+      <Hsp_score>751</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1337452</Hsp_hit-from>
+      <Hsp_hit-to>1337075</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>377</Hsp_identity>
+      <Hsp_positive>377</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|971459729|emb|LN901269.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_43130</Hit_def>
+  <Hit_accession>LN901269</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>678.451</Hsp_bit-score>
+      <Hsp_score>751</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>377</Hsp_identity>
+      <Hsp_positive>377</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|971459739|emb|LN901274.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Felg_78</Hit_def>
+  <Hit_accession>LN901274</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>673.943</Hsp_bit-score>
+      <Hsp_score>746</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>376</Hsp_identity>
+      <Hsp_positive>376</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|395125967|emb|FQ958210.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila str. Lorraine chromosome, complete genome</Hit_def>
+  <Hit_accession>FQ958210</Hit_accession>
+  <Hit_len>3467254</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>673.943</Hsp_bit-score>
+      <Hsp_score>746</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1413943</Hsp_hit-from>
+      <Hsp_hit-to>1413566</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>376</Hsp_identity>
+      <Hsp_positive>376</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|1080016817|gb|CP016876.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI337, complete genome</Hit_def>
+  <Hit_accession>CP016876</Hit_accession>
+  <Hit_len>3362463</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>669.434</Hsp_bit-score>
+      <Hsp_score>741</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>2932538</Hsp_hit-from>
+      <Hsp_hit-to>2932161</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>375</Hsp_identity>
+      <Hsp_positive>375</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|1080010157|gb|CP016873.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI105, complete genome</Hit_def>
+  <Hit_accession>CP016873</Hit_accession>
+  <Hit_len>3363998</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>669.434</Hsp_bit-score>
+      <Hsp_score>741</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>73018</Hsp_hit-from>
+      <Hsp_hit-to>72641</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>375</Hsp_identity>
+      <Hsp_positive>375</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|1080006767|gb|CP016872.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI104, complete genome</Hit_def>
+  <Hit_accession>CP016872</Hit_accession>
+  <Hit_len>3362494</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>669.434</Hsp_bit-score>
+      <Hsp_score>741</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>750519</Hsp_hit-from>
+      <Hsp_hit-to>750896</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>375</Hsp_identity>
+      <Hsp_positive>375</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|971459763|emb|LN901287.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain NMex_1</Hit_def>
+  <Hit_accession>LN901287</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>669.434</Hsp_bit-score>
+      <Hsp_score>741</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>375</Hsp_identity>
+      <Hsp_positive>375</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|1403456942|emb|LS483410.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain NCTC11404 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LS483410</Hit_accession>
+  <Hit_len>3396440</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1490861</Hsp_hit-from>
+      <Hsp_hit-to>1490484</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|1360372642|gb|CP021269.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Bellingham 1 (D-7473) chromosome, complete genome</Hit_def>
+  <Hit_accession>CP021269</Hit_accession>
+  <Hit_len>3403366</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1491411</Hsp_hit-from>
+      <Hsp_hit-to>1491034</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|1360372592|gb|CP021266.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Knoxville 1 (D-7468) chromosome, complete genome</Hit_def>
+  <Hit_accession>CP021266</Hit_accession>
+  <Hit_len>3426115</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1490603</Hsp_hit-from>
+      <Hsp_hit-to>1490226</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|1231769114|emb|LT906476.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain NCTC11286 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LT906476</Hit_accession>
+  <Hit_len>3426113</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1490602</Hsp_hit-from>
+      <Hsp_hit-to>1490225</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|1142863890|gb|CP014759.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain F4468, complete genome</Hit_def>
+  <Hit_accession>CP014759</Hit_accession>
+  <Hit_len>3439438</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1510607</Hsp_hit-from>
+      <Hsp_hit-to>1510230</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|1134518486|gb|CP014760.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain F4469, complete genome</Hit_def>
+  <Hit_accession>CP014760</Hit_accession>
+  <Hit_len>3439440</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1510608</Hsp_hit-from>
+      <Hsp_hit-to>1510231</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|1080013668|gb|CP016874.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI329, complete genome</Hit_def>
+  <Hit_accession>CP016874</Hit_accession>
+  <Hit_len>3363658</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>382666</Hsp_hit-from>
+      <Hsp_hit-to>383043</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|1080003583|gb|CP016870.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI103, complete genome</Hit_def>
+  <Hit_accession>CP016870</Hit_accession>
+  <Hit_len>3363616</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>566010</Hsp_hit-from>
+      <Hsp_hit-to>565633</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|1080000375|gb|CP016868.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain FFI102, complete genome</Hit_def>
+  <Hit_accession>CP016868</Hit_accession>
+  <Hit_len>3363654</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1412865</Hsp_hit-from>
+      <Hsp_hit-to>1413242</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|1032662147|gb|CP015344.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain D-7630, complete genome</Hit_def>
+  <Hit_accession>CP015344</Hit_accession>
+  <Hit_len>3444702</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1508871</Hsp_hit-from>
+      <Hsp_hit-to>1508494</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|1032659180|gb|CP015343.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain D-7631, complete genome</Hit_def>
+  <Hit_accession>CP015343</Hit_accession>
+  <Hit_len>3436178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1508862</Hsp_hit-from>
+      <Hsp_hit-to>1508485</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|1032656210|gb|CP015342.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain D-7632, complete genome</Hit_def>
+  <Hit_accession>CP015342</Hit_accession>
+  <Hit_len>3435648</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1508331</Hsp_hit-from>
+      <Hsp_hit-to>1507954</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|971459710|emb|LN901258.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Agn 3 &gt;gi|971459712|emb|LN901259.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Agn 4 &gt;gi|971459731|emb|LN901270.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_43283 &gt;gi|971459746|emb|LN901278.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ice_1 &gt;gi|971459771|emb|LN901291.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain NMex_49 &gt;gi|971459775|emb|LN901293.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Sg_46 &gt;gi|971459777|emb|LN901294.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Sg_69 &gt;gi|971460442|emb|LN906814.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Felg45</Hit_def>
+  <Hit_accession>LN901258</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|971459708|emb|LN901257.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Agn 2 &gt;gi|971460440|emb|LN906813.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Por9</Hit_def>
+  <Hit_accession>LN901257</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|971459704|emb|LN901255.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Aco 13 &gt;gi|971459733|emb|LN901271.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_43703 &gt;gi|971459744|emb|LN901277.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ger_12 &gt;gi|971459748|emb|LN901279.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ice_12 &gt;gi|971460437|emb|LN906811.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Alf22</Hit_def>
+  <Hit_accession>LN901255</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|395129037|emb|FQ958211.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila str. HL06041035 chromosome, complete genome</Hit_def>
+  <Hit_accession>FQ958211</Hit_accession>
+  <Hit_len>3492535</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1522138</Hsp_hit-from>
+      <Hsp_hit-to>1521761</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|295647398|gb|CP001828.1|</Hit_id>
+  <Hit_def>Legionella pneumophila 2300/99 Alcoy, complete genome</Hit_def>
+  <Hit_accession>CP001828</Hit_accession>
+  <Hit_len>3516334</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1596640</Hsp_hit-from>
+      <Hsp_hit-to>1596263</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|225791049|gb|CP000675.2|</Hit_id>
+  <Hit_def>Legionella pneumophila str. Corby, complete genome</Hit_def>
+  <Hit_accession>CP000675</Hit_accession>
+  <Hit_len>3576470</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1598113</Hsp_hit-from>
+      <Hsp_hit-to>1597736</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|53752796|emb|CR628337.1|</Hit_id>
+  <Hit_def>Legionella pneumophila str. Lens complete genome</Hit_def>
+  <Hit_accession>CR628337</Hit_accession>
+  <Hit_len>3345687</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.926</Hsp_bit-score>
+      <Hsp_score>736</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1494646</Hsp_hit-from>
+      <Hsp_hit-to>1494269</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATCCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|971459741|emb|LN901275.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA pseudogene, strain Felg_84</Hit_def>
+  <Hit_accession>LN901275</Hit_accession>
+  <Hit_len>377</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>664.024</Hsp_bit-score>
+      <Hsp_score>735</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>377</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>376</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>374</Hsp_identity>
+      <Hsp_positive>374</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>377</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATA</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAA-TCCCAAATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|971459755|emb|LN901283.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain IMC_1</Hit_def>
+  <Hit_accession>LN901283</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>663.123</Hsp_bit-score>
+      <Hsp_score>734</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>377</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>377</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>377</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATA</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATA</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|1810190117|gb|CP048618.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain ERS1305867 chromosome, complete genome</Hit_def>
+  <Hit_accession>CP048618</Hit_accession>
+  <Hit_len>3405663</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1549627</Hsp_hit-from>
+      <Hsp_hit-to>1549250</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|1360372998|gb|CP021286.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Albuquerque 1 (D-7474) chromosome, complete genome</Hit_def>
+  <Hit_accession>CP021286</Hit_accession>
+  <Hit_len>3508676</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1448758</Hsp_hit-from>
+      <Hsp_hit-to>1448381</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|1360372941|gb|CP021281.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Flint 2 (D-7477) chromosome, complete genome</Hit_def>
+  <Hit_accession>CP021281</Hit_accession>
+  <Hit_len>3588028</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1440907</Hsp_hit-from>
+      <Hsp_hit-to>1440530</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|1360372609|gb|CP021268.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Birmingham 1 (D-7470) chromosome, complete genome</Hit_def>
+  <Hit_accession>CP021268</Hit_accession>
+  <Hit_len>3436658</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1489035</Hsp_hit-from>
+      <Hsp_hit-to>1488658</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|1231701809|emb|LT906452.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain NCTC11985 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LT906452</Hit_accession>
+  <Hit_len>3514598</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1434515</Hsp_hit-from>
+      <Hsp_hit-to>1434138</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|1103995024|emb|LT632614.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain ST62 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LT632614</Hit_accession>
+  <Hit_len>3530817</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1548391</Hsp_hit-from>
+      <Hsp_hit-to>1548014</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|1073859431|gb|CP016030.2|</Hit_id>
+  <Hit_def>Legionella pneumophila strain OLDA, complete genome</Hit_def>
+  <Hit_accession>CP016030</Hit_accession>
+  <Hit_len>3486107</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1487706</Hsp_hit-from>
+      <Hsp_hit-to>1487329</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|1073859430|gb|CP016029.2|</Hit_id>
+  <Hit_def>Legionella pneumophila strain Pontiac, complete genome</Hit_def>
+  <Hit_accession>CP016029</Hit_accession>
+  <Hit_len>3545003</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1548856</Hsp_hit-from>
+      <Hsp_hit-to>1548479</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|1015431077|gb|CP011105.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain L10-023, complete genome</Hit_def>
+  <Hit_accession>CP011105</Hit_accession>
+  <Hit_len>3641882</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1533259</Hsp_hit-from>
+      <Hsp_hit-to>1532882</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|1005831735|gb|CP012019.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain Toronto-2005, complete genome</Hit_def>
+  <Hit_accession>CP012019</Hit_accession>
+  <Hit_len>3573898</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1485324</Hsp_hit-from>
+      <Hsp_hit-to>1484947</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|971459769|emb|LN901290.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain NMex_44</Hit_def>
+  <Hit_accession>LN901290</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCATATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGTTAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|971459742|emb|LN901276.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ger_1</Hit_def>
+  <Hit_accession>LN901276</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAAGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAAAATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|971459727|emb|LN901268.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_35289 &gt;gi|971459761|emb|LN901286.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Ma_36 &gt;gi|971459773|emb|LN901292.1| Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain Por_3</Hit_def>
+  <Hit_accession>LN901268</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|971459725|emb|LN901267.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_35096</Hit_def>
+  <Hit_accession>LN901267</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|1910787595|gb|CP061840.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila strain AW-13-4 chromosome, complete genome</Hit_def>
+  <Hit_accession>CP061840</Hit_accession>
+  <Hit_len>3512088</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1439767</Hsp_hit-from>
+      <Hsp_hit-to>1439390</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|53749768|emb|CR628336.1|</Hit_id>
+  <Hit_def>Legionella pneumophila str. Paris complete genome</Hit_def>
+  <Hit_accession>CR628336</Hit_accession>
+  <Hit_len>3503610</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>660.418</Hsp_bit-score>
+      <Hsp_score>731</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1496234</Hsp_hit-from>
+      <Hsp_hit-to>1495857</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAGCTCTATGACCCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|971459724|emb|LN901266.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA pseudogene, strain ATCC_33823</Hit_def>
+  <Hit_accession>LN901266</Hit_accession>
+  <Hit_len>377</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>656.811</Hsp_bit-score>
+      <Hsp_score>727</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>377</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>373</Hsp_identity>
+      <Hsp_positive>373</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAG-AAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATAGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|1103998197|emb|LT632615.1|</Hit_id>
+  <Hit_def>Legionella pneumophila strain ST23 genome assembly, chromosome: 1</Hit_def>
+  <Hit_accession>LT632615</Hit_accession>
+  <Hit_len>3509586</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>655.909</Hsp_bit-score>
+      <Hsp_score>726</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1491674</Hsp_hit-from>
+      <Hsp_hit-to>1491297</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>-1</Hsp_hit-frame>
+      <Hsp_identity>372</Hsp_identity>
+      <Hsp_positive>372</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATCCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>gi|971459735|emb|LN901272.1|</Hit_id>
+  <Hit_def>Legionella pneumophila subsp. pneumophila nttA gene for novel type two secreted protein A, strain ATCC_43736</Hit_def>
+  <Hit_accession>LN901272</Hit_accession>
+  <Hit_len>378</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>655.909</Hsp_bit-score>
+      <Hsp_score>726</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>378</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>378</Hsp_hit-to>
+      <Hsp_query-frame>1</Hsp_query-frame>
+      <Hsp_hit-frame>1</Hsp_hit-frame>
+      <Hsp_identity>372</Hsp_identity>
+      <Hsp_positive>372</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>378</Hsp_align-len>
+      <Hsp_qseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTAAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTTATTCAAGATCCGGATCTCAAAAAACGATCTGATGAAATTAAAATGACTTATGAACAATGTGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGCGAAACAGCTGGCACATGGGGAAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_qseq>
+      <Hsp_hseq>ATGTCAAGGAAATTACTTATTGCTACCACGCTCGTGCTTAGCACTTCATTATTTCCCTTAATATCCAATGCTGAGGACACAGCAAATCCTAATGAGATGACTAAGGATGCTTGGTTAAACTCTATGACTCCCTTATTACCAGATCTTATCTGCAAAGGATTCATTCAAGATCCGGATCTCAAAAAACGATTTGATGAAATTAAAATGACTTATGAACAATGCGTGACTTTAATTCCTGAAAGCACCAAAAAATGCCAAGATGAACTGTATGCCAGCATGCCAGATAAAATCAATAGTGAAACAGCTGGCACATGGGGCAGATCATTAGGAGAATGTATCGGAAAAGATTTTGCTGAAAAACATCTAATTCCCAAATAG</Hsp_hseq>
+      <Hsp_midline>|||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||||||||||| |||||||||||||||||||||||||||||| |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| |||||||||||||||||||| ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>66628201</Statistics_db-num>
+      <Statistics_db-len>359855517142</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.41</Statistics_kappa>
+      <Statistics_lambda>0.625</Statistics_lambda>
+      <Statistics_entropy>0.78</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

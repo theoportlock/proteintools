@@ -1,0 +1,35 @@
+#!/bin/csh
+
+set CONVERSION = y
+set PROCESSING = y
+
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
+  -xN              3072  -yN                96  \
+  -xT              1536  -yT                48  \
+  -xMODE            DQD  -yMODE    States-TPPI  \
+  -xSW        13297.872  -ySW         7173.601  \
+  -xOBS         950.384  -yOBS         238.982  \
+  -xCAR           4.656  -yCAR          37.620  \
+  -xLAB               H  -yLAB              CB  \
+  -ndim               2  -aq2D          States  \
+      -ov -out ./cbhd.fid -verb
+endif
+
+if ($PROCESSING == 'y') then
+   nmrPipe -in ./cbhd.fid                 \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -c 0.5\
+   |   nmrPipe -fn ZF -auto                     \
+   |   nmrPipe -fn FT -auto                     \
+   |   nmrPipe -fn PS -p0 149.0 -p1 0.0 -di       \
+   |   nmrPipe -fn EXT -x1 8.5ppm -xn 5.5ppm -sw       \
+   |   nmrPipe -fn TP                           \
+   |   nmrPipe -fn LP -ps0-0                           \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \
+   |   nmrPipe -fn ZF -auto                     \
+   |   nmrPipe -fn FT -auto                     \
+   |   nmrPipe -fn PS -p0 -6.0 -p1 0.0 -di         \
+   |   nmrPipe -fn CS -ls 2.4ppm -sw         \
+   |   nmrPipe -ov -verb -out cbhd.ft2 
+endif

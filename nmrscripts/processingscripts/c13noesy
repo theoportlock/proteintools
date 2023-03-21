@@ -1,0 +1,45 @@
+#!/bin/csh
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
+  -xN              2048  -yN               100  -zN               480  \
+  -xT              1024  -yT                50  -zT               240  \
+  -xMODE            DQD  -yMODE    States-TPPI  -zMODE    States-TPPI  \
+  -xSW        13297.872  -ySW         9074.410  -zSW        13297.872  \
+  -xOBS         950.384  -yOBS         238.982  -zOBS         950.384  \
+  -xCAR           4.656  -yCAR          40.619  -zCAR           4.656  \
+  -xLAB              HC  -yLAB             13C  -zLAB           H-ind  \
+  -ndim               3  -aq2D          States                         \
+  -out ./C13data/c13noesy%03d.fid -verb -ov
+
+   xyz2pipe -in ./C13data/c13noesy%03d.fid -x                                  \
+   |   nmrPipe -fn POLY -time                                               \
+   |   nmrPipe -fn GMB -lb -6.0 -gb 0.08 -c 0.5                            \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 -234.0 -p1 29.0 -di                                   \
+   |   nmrPipe -fn EXT -x1 6ppm -xn -1ppm -sw                               \
+   |   nmrPipe -fn ZTP                                                       \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT  -auto                                                \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   pipe2xyz -ov -verb -out ./C13data/c13noesy%03d.ft2 -x 
+
+   xyz2pipe -in ./C13data/c13noesy%03d.ft2 -y                                  \
+   |   nmrPipe -fn LP -fb -pred 14                      \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn CS -ls 12ppm -sw                                   \
+   |   pipe2xyz -ov -verb -out ./C13data/c13noesy%03d.ft3 -z
+
+proj3D.tcl -in ./C13data/c13noesy%03d.ft3
+
+endif
+
+
+
+

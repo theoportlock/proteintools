@@ -1,0 +1,57 @@
+#!/bin/csh
+
+set CONVERSION = y
+set PROCESSING_1 = y
+set PROCESSING_2 = y
+set PROCESSING_3 = y
+
+set EXPT = hnco
+
+if ($CONVERSION == 'y') then
+  bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 2666.66666666667 -dspfvs 20 -grpdly 67.9861755371094  \
+  -xN              2048  -yN               102  -zN                90  \
+  -xT              1024  -yT                51  -zT                45  \
+  -xMODE            DQD  -yMODE  Echo-AntiEcho  -zMODE    States-TPPI  \
+  -xSW         7500.000  -ySW         1824.152  -zSW         2414.293  \
+  -xOBS         600.005  -yOBS          60.810  -zOBS         150.909  \
+  -xCAR           4.658  -yCAR         116.457  -zCAR         174.796  \
+  -xLAB              1H  -yLAB             15N  -zLAB             13C  \
+  -ndim               3  -aq2D          States                         \
+  -out ./temp/$EXPT%03d.fid -verb -ov
+endif
+
+if ($PROCESSING_1 == 'y') then
+ xyz2pipe -in ./temp/$EXPT%03d.fid -x -verb          \
+ | nmrPipe  -fn SOL                                  \
+ | nmrPipe  -fn GMB -lb -14.0 -gb 0.08              \
+ | nmrPipe  -fn ZF -size 1024                             \
+ | nmrPipe  -fn FT -auto                             \
+ | nmrPipe  -fn EXT -left -sw                        \
+ | nmrPipe  -fn PS -p0 -55.0  -p1 0.0 -di            \
+ | pipe2xyz -out ./temp/$EXPT%03d.ft1 -x
+endif
+
+if ($PROCESSING_2 == 'y') then
+ xyz2pipe -in ./temp/$EXPT%03d.ft1 -z -verb          \
+ | nmrPipe  -fn SP -off 0.45 -end 0.98 -pow 2 -c 0.5  \
+ | nmrPipe  -fn ZF -auto                             \
+ | nmrPipe  -fn FT -auto                       \
+ | nmrPipe  -fn PS -p0 000.0 -p1 0.0 -di            \
+ | pipe2xyz -out ./temp/$EXPT%03d.ft2 -z
+endif
+
+if ($PROCESSING_3 == 'y') then
+ xyz2pipe -in ./temp/$EXPT%03d.ft2 -y -verb          \
+ | nmrPipe  -fn LP -ord 8 -f -pred 51                \
+ | nmrPipe  -fn SP -off 0.45 -end 0.98 -pow 2 -c 0.5  \
+ | nmrPipe  -fn ZF -size 128                             \
+ | nmrPipe  -fn FT -neg                      \
+ | nmrPipe  -fn PS -p0  90.0 -p1 0.0 -di              \
+ | pipe2xyz -out ./temp/$EXPT%03d.ft3 -y
+
+ xyz2pipe -in ./temp/$EXPT%03d.ft3 -x -verb          \
+ | nmrPipe  -fn POLY -auto -sx1 10.8ppm -sxn 4.7ppm  \
+ | pipe2xyz -nv -ov -out ./$EXPT'.nv' -x
+endif
+

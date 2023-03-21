@@ -1,0 +1,65 @@
+#!/bin/csh
+#
+# nmrpipe script for processing 2D relaxation experiments with a 3rd real dimension
+# by Andrea C. Sauerwein
+# date: August 2016
+#
+#
+set CONVERSION = y
+set RESHUFFLING = y
+set PROCESSING = y
+#
+# 1. data conversion
+#
+if ($CONVERSION == 'y') then
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1400 -dspfvs 20 -grpdly 67.987060546875  \
+  -xN              3072  -zN               384  -yN                11  \
+  -xT              1536  -zT               192  -yT                11  \
+  -xMODE            DQD  -zMODE      Rance-Kay  -yMODE           Real  \
+  -xSW        14285.714  -zSW 2118.64406779661  -ySW            8.000  \
+  -xOBS         950.384  -zOBS          96.313  -yOBS           1.000  \
+  -xCAR           4.914  -zCAR         118.724  -yCAR           0.000  \
+  -xLAB              1H  -zLAB             15N  -yLAB             TAU  \
+  -ndim               3  -aq2D          States                         \
+ | nmrPipe -ov -verb -out test.fid
+endif
+#
+# 2. data conversion
+#
+if ($RESHUFFLING == 'y') then
+nmrPipe -in test.fid \
+ | nmrPipe -fn TP -auto \
+ | nmrPipe -fn ZTP  \
+ | nmrPipe -fn TP -auto \
+ | nmrPipe -ov -verb -out tt.fid
+ mv tt.fid test.fid
+endif
+# 
+# 3. processing
+#
+if ($PROCESSING == 'y') then
+nmrPipe -verb -in test.fid                                   \
+ |   nmrPipe  -fn SOL                                \
+ #|   nmrPipe  -fn GM -g1 0.0 -g2 8 -g3 0. -c 0.5            \
+ |   nmrPipe -fn GMB -lb -4 -gb 0.1 -c 0.5\
+ |   nmrPipe  -fn ZF -auto                                  \
+ |   nmrPipe  -fn FT                                        \
+ #|   nmrPipe  -fn PS -p0 -170. -p1 0.0  -di                    \
+ #|   nmrPipe  -fn EXT -xn 6.5ppm -x1 9.5ppm -sw              \
+ #|   nmrPipe  -fn TP                                        \
+ #|   nmrPipe  -fn LP -ord 16 -fb                            \
+ #|   nmrPipe  -fn GM -g1 0.0 -g2 12 -g3 0. -c 1.00           \
+ #|   nmrPipe -fn SP -off 0.42 -pow 2 -end 0.99 -c 0.50 \
+ #|   nmrPipe  -fn ZF -auto                                  \
+ #|   nmrPipe  -fn FT                                 \
+ #|   nmrPipe  -fn PS -p0 -90. -p1 0 -di                   \
+ |   nmrPipe  -fn TP                                        \
+ |   pipe2xyz -ov -verb -out data/test%03d.ft2
+
+#
+# Collect data
+xyz2pipe -in data/test%03d.ft2 \
+ |   nmrPipe -ov -verb -out test.ft2
+
+endif

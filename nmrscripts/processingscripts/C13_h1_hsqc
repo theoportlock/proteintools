@@ -1,0 +1,38 @@
+#!/bin/csh 
+var2pipe -in ./peng_10jul01_wt6.var   \ 
+  -xN             2048   \ 
+  -yN              512   \ 
+  -xT             1024   \ 
+  -yT              512   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Real     \ 
+  -xSW         6000.200  \ 
+  -ySW        25160.200  \ 
+  -xOBS         500.297  \ 
+  -yOBS         125.807  \ 
+  -xCAR           4.700  \ 
+  -yCAR           70.00  \ 
+  -xLAB              H1  \ 
+  -yLAB             C13  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp       \ 
+| nmrPipe -fn NULL       \ 
+| nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \ 
+| nmrPipe -fn FT         \ 
+| nmrPipe -fn PS -p0 -25.0 -p1 0.0 -di  \ 
+| nmrPipe -fn TP         \ 
+| nmrPipe -fn ZF -auto   \ 
+| nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5 \ 
+| nmrPipe -fn FT -real   \ 
+| nmrPipe -fn PS -p0 0.0  -p1 360.0   \ 
+| nmrPipe -fn REV -di    \ 
+| nmrPipe -fn POLY -auto \ 
+| nmrPipe -fn TP         \ 
+| nmrPipe -fn POLY -auto \ 
+| nmrPipe -fn TP         \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 peng_10jul01_wt6.spa 
+rm -f temp 
+rm -f temp2 
+#

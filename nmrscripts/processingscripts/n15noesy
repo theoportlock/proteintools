@@ -1,0 +1,41 @@
+#!/bin/csh
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -ext -aswap -AMX -decim 1560 -dspfvs 20 -grpdly 67.9867858886719  \
+  -xN              3072  -yN                92  -zN               256  \
+  -xT              1536  -yT                46  -zT               128  \
+  -xMODE            DQD  -yMODE    States-TPPI  -zMODE    States-TPPI  \
+  -xSW        12820.513  -ySW         2596.054  -zSW        12820.513  \
+  -xOBS         800.334  -yOBS          81.106  -zOBS         800.334  \
+  -xCAR           4.656  -yCAR         115.967  -zCAR           4.656  \
+  -xLAB              HN  -yLAB             15N  -zLAB              1H  \
+  -ndim               3  -aq2D         States                          \          
+-out ./N15data/N15noesy%03d.fid -verb -ov
+
+   xyz2pipe -in ./N15data/N15noesy%03d.fid -x                                  \
+   |   nmrPipe -fn POLY -time                                               \
+   |   nmrPipe -fn GMB -lb -6.0 -gb 0.08 -c 0.5                            \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0 -di                                   \
+   |   nmrPipe -fn EXT -x1 11ppm -xn 6ppm -sw                               \
+   |   nmrPipe -fn ZTP                                                       \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT  -alt                                                \
+   |   nmrPipe -fn PS -p0 36.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   pipe2xyz -ov -verb -out ./N15data/N15noesy%03d.ft2 -x 
+
+   xyz2pipe -in ./N15data/N15noesy%03d.ft2 -y                                  \
+   |   nmrPipe -fn LP -fb -pred 12			                      \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -alt                                                  \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+#   |   nmrPipe -fn CS -ls 14ppm -sw                                   \
+   |   pipe2xyz -ov -verb -out ./N15data/N15noesy%03d.ft3 -z
+
+proj3D.tcl -in ./N15data/N15noesy%03d.ft3
+
+endif

@@ -1,0 +1,31 @@
+#!/bin/csh
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -ext -aswap -AMX -decim 1792 -dspfvs 20 -grpdly 67.9841766357422  \
+  -xN              2048  -yN               192  \
+  -xT              1024  -yT                96  \
+  -xMODE            DQD  -yMODE  Echo-AntiEcho  \
+  -xSW        11160.714  -ySW         1986.492  \
+  -xOBS         700.203  -yOBS          70.959  \
+  -xCAR           4.657  -yCAR         119.962  \
+  -xLAB              HN  -yLAB             15N  \
+  -ndim               2  -aq2D         Complex  \
+  -ov -out test.fid -verb 
+
+nmrPipe -in test.fid \
+| nmrPipe  -fn SOL                                    \
+| nmrPipe  -fn GMB -lb -10.0 -gb 0.2                  \
+| nmrPipe  -fn ZF -auto                          \
+| nmrPipe  -fn FT -auto                                    \
+| nmrPipe  -fn PS -p0 90.0 -p1 0.0 -di               \
+| nmrPipe  -fn EXT -left -sw                          \
+| nmrPipe  -fn SP -off 0.40 -pow 2 -end 1 -c 0.5              \
+| nmrPipe  -fn ZF -size auto                           \
+| nmrPipe  -fn FT -auto                                    \
+| nmrPipe  -fn PS -p0 90.0 -p1 0.0 -di                 \
+| nmrPipe  -fn TP                                     \
+| nmrPipe  -fn POLY -auto -ord 5 -sx1 11.0ppm -sxn 6.0ppm \
+-verb -ov -out output.ft
+
+pipe2xyz -in output.ft -nv -out output.nv
+| nmrPipe  -fn TP                                      \

@@ -1,0 +1,62 @@
+#!/bin/csh 
+var2pipe -in ./y2a_hnca.var   \ 
+  -xN             1024   \ 
+  -yN              128   \ 
+  -zN               64   \ 
+  -xT              512   \ 
+  -yT               64   \ 
+  -zT               32   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Complex  \ 
+  -zMODE      Rance-Kay  \ 
+  -xSW         7650.000  \ 
+  -ySW         4000.000  \ 
+  -zSW         1650.200  \ 
+  -xOBS         500.297  \ 
+  -yOBS         125.800  \ 
+  -zOBS          50.700  \ 
+  -xCAR           4.915  \ 
+  -yCAR          54.000  \ 
+  -zCAR         119.200  \ 
+  -xLAB              H1  \ 
+  -yLAB             C13  \ 
+  -zLAB             N15  \ 
+  -ndim               3  \ 
+  -aqORD              1  \ 
+  -out ./temp_files/test%03d.fid -verb -ov 
+xyz2pipe -in temp_files/test%03d.fid -x -verb  \ 
+  | nmrPipe -fn SP -off 0.4 -end 0.99 -pow 1 -c 1.0         \ 
+  | nmrPipe -fn ZF -auto      \ 
+  | nmrPipe -fn FT          \ 
+  | nmrPipe -fn PS -p0 -102.0 -p1 0.0      \ 
+  | nmrPipe -fn EXT -x1 12.54ppm -xn 5.6ppm -sw -round  \ 
+  | pipe2xyz -out temp_files/test%03d.ft1 -x        \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft1 -z -verb  \ 
+  | nmrPipe -fn SP -off 0.3 -end 0.99 -pow 1 -c 0.6         \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT    \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 0.0  -di         \ 
+  | pipe2xyz -out temp_files/test%03d.ft2 -z -verb    \ 
+# 
+xyz2pipe -in temp_files/test%03d.ft2 -y -verb   \ 
+  | nmrPipe -fn SP -off 0.3 -end 0.99 -pow 1 -c 0.6        \ 
+  | nmrPipe -fn ZF -auto    \ 
+  | nmrPipe -fn FT      \ 
+  | nmrPipe -fn PS -p0 0.0 -p1 -0.0  -di   \ 
+# | nmrPipe -fn POLY -auto    \ 
+  | pipe2xyz -out temp_files/test%3d.ft3 -y -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft3 -x -verb   \ 
+  | nmrPipe -fn POLY -auto     \ 
+  | pipe2xyz -out temp_files/test%3d.ft4 -x -verb   \ 
+# 
+xyz2pipe -in temp_files/test%3d.ft4 -z -out spectrum  \ 
+# 
+pipe2ucsf spectrum y2a_hnca.spa 
+cp y2a_hnca.spa ~/Sparky/Save/ 
+# 
+rm -rf temp_files 
+rm -f spectrum 
+#
+

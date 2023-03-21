@@ -1,0 +1,42 @@
+#!/bin/csh 
+var2pipe -in ./y2a_hmqcjr_2.var   \ 
+  -xN             2048   \ 
+  -yN              700   \ 
+  -xT             1024   \ 
+  -yT              700   \ 
+  -xMODE        Complex  \ 
+  -yMODE        Real     \ 
+  -xSW         8500.000  \ 
+  -ySW         5000.000  \ 
+  -xOBS         500.297  \ 
+  -yOBS          50.700  \ 
+  -xCAR           4.870  \ 
+  -yCAR          121.00  \ 
+  -xLAB              H1  \ 
+  -yLAB             N15  \ 
+  -ndim               2  \ 
+  -out ./temp -verb -ov 
+nmrPipe -in ./temp   \ 
+| nmrPipe -fn NULL    \ 
+| nmrPipe -fn SP -off 0.020 -end 0.99 -pow 1 -c 0.9         \ 
+| nmrPipe -fn EM -lb 20.0   \ 
+| nmrPipe -fn FT          \ 
+| nmrPipe -fn PS -p0 180.0 -p1 0.0 -di         \ 
+| nmrPipe -fn EXT -x1 12.8ppm -xn 5.5ppm -sw -round   \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn ZF -auto         \ 
+| nmrPipe -fn SP -off 0.35 -end 0.98 -pow 2 -c 0.6         \ 
+| nmrPipe -fn EM -lb 6.0   \ 
+| nmrPipe -fn FT -real         \ 
+| nmrPipe -fn PS -p0 -55.0 -p1 470.0           \ 
+| nmrPipe -fn REV -di  \ 
+| nmrPipe -fn TP     \ 
+| nmrPipe -fn POLY -auto  \ 
+| nmrPipe -fn TP          \ 
+| nmrPipe -fn POLY -auto   \ 
+  -out ./temp2 -verb -ov 
+pipe2ucsf temp2 y2a_hmqcjr_2.spa 
+rm -f temp 
+rm -f temp2 
+cp y2a_hmqcjr_2.spa ~/Sparky/Save/ 
+#

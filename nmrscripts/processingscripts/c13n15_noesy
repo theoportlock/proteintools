@@ -1,0 +1,140 @@
+#!/bin/csh
+#
+# nmrpipe script for processing 3D N15/C13 NOESY 
+#
+#
+set CONVERSION = y
+set PROCESSING_BOTH = n
+set PROCESSING_13C = y
+set PROCESSING_15N = y
+
+
+if ($PROCESSING_BOTH == 'y') then
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
+  -xN              2048  -yN               100  -zN               480  \
+  -xT              1024  -yT                50  -zT               240  \
+  -xMODE            DQD  -yMODE    States-TPPI  -zMODE    States-TPPI  \
+  -xSW        13297.872  -ySW         1000.000  -zSW        13297.872  \
+  -xOBS         950.384  -yOBS         100.000  -zOBS         950.384  \
+  -xCAR           4.656  -yCAR           0.000  -zCAR           4.656  \
+  -xLAB             HCN  -yLAB         13C-15N  -zLAB              1H  \
+  -ndim               3  -aq2D          States                         \
+  -out ./C13N15data/C13N15noesy%03d.fid -verb -ov
+
+   xyz2pipe -in ./C13N15data/C13N15noesy%03d.fid -x                                  \
+   |   nmrPipe -fn POLY -time                                               \
+   |   nmrPipe -fn GMB -lb -6.0 -gb 0.08 -c 0.5                            \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 22.0 -p1 0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT  -auto                                                \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   pipe2xyz -ov -verb -out ./C13N15data/C13N15noesy%03d.ft2 -x 
+
+   xyz2pipe -in ./C13N15data/C13N15noesy%03d.ft2 -y                                  \
+   |   nmrPipe -fn LP -fb -pred 14                      \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn CS -ls 12ppm -sw                                   \
+   |   pipe2xyz -ov -verb -out ./C13N15data/C13N15noesy%03d.ft3 -z
+
+proj3D.tcl -in ./C13N15data/C13N15noesy%03d.ft3
+
+endif
+
+if ($PROCESSING_13C == 'y') then
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
+  -xN              2048  -yN               100  -zN               480  \
+  -xT              1024  -yT                50  -zT               240  \
+  -xMODE            DQD  -yMODE    States-TPPI  -zMODE    States-TPPI  \
+  -xSW        13297.872  -ySW         9074.410  -zSW        13297.872  \
+  -xOBS         950.384  -yOBS         238.982  -zOBS         950.384  \
+  -xCAR           4.656  -yCAR          40.619  -zCAR           4.656  \
+  -xLAB              HC  -yLAB             13C  -zLAB           H-ind  \
+  -ndim               3  -aq2D          States                         \
+  -out ./C13data/C13noesy%03d.fid -verb -ov
+
+   xyz2pipe -in ./C13data/C13noesy%03d.fid -x                                  \
+   |   nmrPipe -fn POLY -time                                               \
+   |   nmrPipe -fn GMB -lb -6.0 -gb 0.08 -c 0.5                            \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 -234.0 -p1 29.0 -di                                   \
+   |   nmrPipe -fn EXT -x1 6ppm -xn -1ppm -sw                               \
+   |   nmrPipe -fn ZTP                                                       \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT  -auto                                                \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   pipe2xyz -ov -verb -out ./C13data/C13noesy%03d.ft2 -x 
+
+   xyz2pipe -in ./C13data/C13noesy%03d.ft2 -y                                  \
+   |   nmrPipe -fn LP -fb -pred 14                      \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn CS -ls 12ppm -sw                                   \
+   |   pipe2xyz -ov -verb -out ./C13data/C13noesy%03d.ft3 -z
+
+proj3D.tcl -in ./C13data/C13noesy%03d.ft3
+
+endif
+
+
+if ($PROCESSING_15N == 'y') then
+
+bruk2pipe -in ./ser \
+  -bad 0.0 -aswap -DMX -decim 1504 -dspfvs 20 -grpdly 67.984130859375  \
+  -xN              2048  -yN               100  -zN               480  \
+  -xT              1024  -yT                50  -zT               240  \
+  -xMODE            DQD  -yMODE    States-TPPI  -zMODE    States-TPPI  \
+  -xSW        13297.872  -ySW         3467.286  -zSW        13297.872  \
+  -xOBS         950.384  -yOBS          96.312  -zOBS         950.384  \
+  -xCAR           4.656  -yCAR         115.963  -zCAR           4.656  \
+  -xLAB              HN  -yLAB             15N  -zLAB           H-ind  \
+  -ndim               3  -aq2D          States                         \
+  -out ./N15data/N15noesy%03d.fid -verb -ov
+
+   xyz2pipe -in ./N15data/N15noesy%03d.fid -x                                  \
+   |   nmrPipe -fn POLY -time                                               \
+   |   nmrPipe -fn GMB -lb -6.0 -gb 0.08 -c 0.5                            \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 -72.0 -p1 0 -di                                   \
+   |   nmrPipe -fn EXT -x1 11ppm -xn 6ppm -sw                               \
+   |   nmrPipe -fn ZTP                                                       \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT  -auto                                                \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+   |   nmrPipe -fn ZTP                                                       \
+   |   pipe2xyz -ov -verb -out ./N15data/N15noesy%03d.ft2 -x 
+
+   xyz2pipe -in ./N15data/N15noesy%03d.ft2 -y                                  \
+   |   nmrPipe -fn LP -fb -pred 14                      \
+   |   nmrPipe -fn SP -off 0.5 -end 0.98 -pow 2 -c 0.5                      \
+   |   nmrPipe -fn ZF -auto                                                 \
+   |   nmrPipe -fn FT -auto                                                 \
+   |   nmrPipe -fn PS -p0 0.0 -p1 0.0 -di                                   \
+#   |   nmrPipe -fn CS -ls 14ppm -sw                                   \
+   |   pipe2xyz -ov -verb -out ./N15data/N15noesy%03d.ft3 -z
+
+   xyz2pipe -in ./N15data/N15noesy%03d.ft3 -x                                  \
+   |   nmrPipe -fn POLY -auto                      \
+   |   pipe2xyz -ov -verb -out ./N15data/N15noesy%03d.ft3 -x -inPlace
+   
+proj3D.tcl -in ./N15data/N15noesy%03d.ft3
+
+endif

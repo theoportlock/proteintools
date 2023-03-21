@@ -1,0 +1,11 @@
+#!/bin/csh
+
+set filename=$1
+#For 2D dataset (Routine Processing Procedure for 2D Experiment)
+nmrPipe -in ${filename}\
+|pipe2xyz -nv -out ${filename:r}.nv
+
+#For a 3D dataset (Routine Processing Procedure for 3D 15N and 13C-edited Experiments)
+#xyz2pipe -in lp/test%03d.ft3 -x \
+#|pipe2xyz -nv -out filename.nv
+

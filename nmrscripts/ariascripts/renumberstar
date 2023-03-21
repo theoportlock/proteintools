@@ -1,0 +1,13 @@
+#!/usr/bin/env python
+import pynmrstar
+import sys
+
+inputfile = sys.argv[1]
+entry = pynmrstar.Entry.from_file(inputfile)
+shift_loops = entry.get_loops_by_category('_Atom_chem_shift')
+
+for chemical_shift_loop in shift_loops:
+    chemical_shift_loop.sort_rows('Comp_Index_ID')
+    chemical_shift_loop.renumber_rows('ID', 1, False)
+    chemical_shift_loop.renumber_rows('Comp_index_ID', -7, True)
+entry.write_to_file('output.str')
