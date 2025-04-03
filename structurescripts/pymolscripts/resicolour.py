@@ -12,7 +12,6 @@ def resicolor(selection='all'):
     cmd.select ('cys','resn cys or resn cyx')
     cmd.select ('backbone','name ca or name n or name c or name o')
     cmd.select ('none')
-
     print(selection)
     code={'acid'    :  'red'    ,
           'basic'   :  'blue'   ,
@@ -26,8 +25,7 @@ def resicolor(selection='all'):
         cmd.do (line)
     word='color white,backbone &'+selection
     print(word)
-    cmd.do (word)                  #Used to be in code, but looks like
-                                   #dictionnaries are accessed at random
+    cmd.do (word)
     cmd.hide ('everything','resn HOH')
 
 cmd.extend ('resicolor',resicolor)

@@ -10,7 +10,6 @@ def loadBfacts (mol,startaa=1,source="newBfactors.csv", visual="Y"):
 	inFile = open(source, 'r')
 	counter=int(startaa)
 	bfacts=[]
-
 	for line in inFile.readlines():	
 		bfact=float(line)
 		bfacts.append(bfact)
