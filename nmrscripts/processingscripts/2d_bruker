@@ -18,17 +18,17 @@ endif
 if ($PROCESSING == 'y') then
    nmrPipe -verb -in ./test.fid                 \
    |   nmrPipe -fn POLY -time			\
-  |   nmrPipe -fn GMB -lb -4 -gb 0.1 -c 0.5\
+   |   nmrPipe -fn GMB -lb -4 -gb 0.1 -c 0.5\
    |   nmrPipe -fn ZF -auto                     \
    |   nmrPipe -fn FT -auto                     \
    |   nmrPipe -fn PS -p0 208.0 -p1 151.0 -di       \
-  # careful  |   nmrPipe -fn EXT -x1 12ppm -xn 5ppm -sw       \
+# careful  |   nmrPipe -fn EXT -x1 12ppm -xn 5ppm -sw       \
    |   nmrPipe -fn TP \
    |   nmrPipe -fn LP -f   -ord 8                    \
    |   nmrPipe -fn SP -off 0.33 -end 0.98 -pow 1 -c 0.5 \
    |   nmrPipe -fn ZF -auto                     \
    |   nmrPipe -fn FT -auto                     \
-  # |   nmrPipe -fn PS -p0 -90 -p1 0.0 -di         \
-  # |   nmrPipe -fn TP                           \
+ # |   nmrPipe -fn PS -p0 -90 -p1 0.0 -di         \
+ # |   nmrPipe -fn TP                           \
    |   nmrPipe -ov -verb -out CC.ft2 
 endif
